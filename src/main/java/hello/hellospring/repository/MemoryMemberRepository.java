@@ -1,9 +1,11 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     //회원관리를 해쉬맵틀로 만들어서 저장해줌
@@ -47,6 +49,8 @@ public class MemoryMemberRepository implements MemberRepository {
 
         return new ArrayList<>(store.values());
     }
+
+
 
     //이거는 테스트 코드를 위해 작성된것
     public void clearStore() {

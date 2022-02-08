@@ -18,11 +18,11 @@ import static org.junit.jupiter.api.Assertions.*;
 //Junit이라는 프레임워크로 테스트를 진행한다
 public class MemoryMemberRepositoryTest {
 
-    MemoryMemberRepository repositroy = new MemoryMemberRepository();
+    MemoryMemberRepository repository = new MemoryMemberRepository();
 
     @AfterEach
     public void afterEach() {
-        repositroy.clearStore();
+        repository.clearStore();
 
     }
 
@@ -34,10 +34,10 @@ public class MemoryMemberRepositoryTest {
         member.setName("spring");
 
         //when
-        repositroy.save(member);
+        repository.save(member);
 
         //then
-        Member result = repositroy.findById(member.getId()).get();
+        Member result = repository.findById(member.getId()).get();
         //안에 get()으로 회원정보를 바로 꺼내는 것은 좋지 않음 여기는 쉬운 예제니 그냥 넘어감
         assertThat(result).isEqualTo(member);
 
@@ -50,14 +50,14 @@ public class MemoryMemberRepositoryTest {
         //given
         Member member1 = new Member();
         member1.setName("spring1");
-        repositroy.save(member1);
+        repository.save(member1);
 
         Member member2 = new Member();
         member2.setName("spring2");
-        repositroy.save(member2);
+        repository.save(member2);
 
         //when
-        Member result = repositroy.findByName("spring1").get();
+        Member result = repository.findByName("spring1").get();
         //then
         assertThat(result).isEqualTo(member1);
     }
@@ -68,13 +68,13 @@ public class MemoryMemberRepositoryTest {
         //given
         Member member1 = new Member();
         member1.setName("spring1");
-        repositroy.save(member1);
+        repository.save(member1);
         Member member2 = new Member();
         member2.setName("spring2");
-        repositroy.save(member2);
+        repository.save(member2);
 
         //when
-        List<Member> result = repositroy.findAll();
+        List<Member> result = repository.findAll();
 
         //then
         assertThat(result.size()).isEqualTo(2);
