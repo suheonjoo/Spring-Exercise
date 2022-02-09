@@ -1,7 +1,7 @@
 package hello.core.order;
 
 import hello.core.discount.DiscountPolicy;
-import hello.core.discount.FixDiscountPolicy;
+//import hello.core.discount.FixDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
@@ -9,8 +9,14 @@ import hello.core.member.MemoryMemberRepository;
 public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberRepository = new MemoryMemberRepository();
-    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
 
+    //private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    //여기 실제로는 추상에도 의존하고 구현에도 의존한 것임 -> dip위반(인터페이스만 의존해야하는데 )
+    //그래서 의존성 때문에  FixDiscountPolicy을 RateDiscountPolicy로 변경하는 순간 OrderServiceImpl도 변경 해야 함
+    // ->ocp 위반 (변경하지 않고 확장할 수 없어서)
+
+    //그래서 아래와 같이 바꿈
+    private DiscountPolicy discountPolicy;//이렇게 하면 dip는 지켰는데 ocp는 못지(null값 반환되면 아래 매서드에서 오류ㄱ)
 
 
     @Override
