@@ -2,7 +2,10 @@ package hello.core.discount;
 
 import hello.core.member.Grade;
 import hello.core.member.Member;
+import org.springframework.stereotype.Component;
 
+//control r이 이전에 run했던거 다시 run 해줌
+@Component
 public class FixDiscountPolicy implements DiscountPolicy{
 
     private int discountFixAmount=1000;
