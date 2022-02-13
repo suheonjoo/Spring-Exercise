@@ -57,7 +57,7 @@ public class AppConfig {
 
 
     @Bean
-    public DiscountPolicy discountPolicy(){
+    public DiscountPolicy discountPolicy(){ //여기에는 2가지 선택 옵션이 있음
         //return new FixDiscountPolicy();
         return new RateDiscountPolicy();
     }
