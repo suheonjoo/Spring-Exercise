@@ -37,24 +37,28 @@ public class FrontControllerServletV3 extends HelloServlet {
         //여기서 getRequestURI를 uri로 받아야지 url로 받으면 안됨  나 이래서 오류났음
 
         //그러면 해당 controller가 찾아짐
+        //(ex.회원조회, 회원 저장, 회원입력)
         ControllerV3 controller = controllerMap.get(requestURI);
         //만약 없으면 예외처리
         if(controller==null){
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
         }
 
-
+        //원하는 controller가 있으니 이게 꺼내서 활용해야함
         //paraMap 맵에서 파라미터를 다 꺼내야 함
         Map<String, String> paramMap = createParamMap(request);
 
-
+        //controller에서 화면에 보일 데이터를 modelview에 넣어준다
         ModelView mv = controller.process(paramMap);
 
+        //controller가 찾은 modelview를 viewname에 논리 이름을 넣는다
         String viewName = mv.getViewName();//논리이름 new-form
 
+        //이제 논리 이름을 실제 url로 바꿔줘야지
         //이것도 그냥 만들다가 단축키로 메서드 따로 추출해줌
         MyView view = viewResolver(viewName);
 
+        //
         view.render(mv.getModel(),request,response);
 
     }
