@@ -20,7 +20,7 @@ public class JpaMain {
             member.setName("AAAA");
 
             em.clear(); //통으로 다 지움
-
+//
             Member member2 = em.find(Member.class, 150L);
 
             tx.commit();
