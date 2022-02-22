@@ -16,12 +16,26 @@ public class JpaMain {
         tx.begin();
 
         try {
-            Member member = em.find(Member.class, 150L);
-            member.setName("AAAA");
 
-            em.clear(); //통으로 다 지움
-//
-            Member member2 = em.find(Member.class, 150L);
+            //저장
+            Team team = new Team();
+            team.setName("TeamA");
+            em.persist(team);
+
+            Member member = new Member();
+            member.setUsername("member1");
+            member.setTeam(team);
+            em.persist(member);
+
+            em.flush();
+            em.clear();     //이 두 코드로 디비에서 값 깔끔하게 옴
+
+            Member findMember = em.find(Member.class, member.getId());
+            List<Member> members = findMember.getTeam().getMembers();
+
+            for (Member m : members) {
+                System.out.println("m.getUsername() = " + m.getUsername());;
+            }
 
             tx.commit();
         }catch (Exception e){
