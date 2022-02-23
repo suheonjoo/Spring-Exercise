@@ -1,10 +1,11 @@
 package hellojpa;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
-public class Member {
+public class Member extends BaseEntity{
 
     @Id @GeneratedValue
     @Column(name = "MEMBER_ID")
@@ -13,13 +14,9 @@ public class Member {
     @Column(name = "name", nullable = false)
     private String username;
 
-    @ManyToOne//이걸해야 오류가 안남
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TEAM_ID")
     private Team team;
-
-    @OneToOne
-    @JoinColumn(name = "LOCKER_ID")
-    private Locker locker;
 
     public Long getId() {
         return id;
@@ -44,4 +41,5 @@ public class Member {
     public void setTeam(Team team) {
         this.team = team;
     }
+
 }
