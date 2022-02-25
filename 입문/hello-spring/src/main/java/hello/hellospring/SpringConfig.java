@@ -17,14 +17,10 @@ public class SpringConfig {
     @PersistenceContext
     private EntityManager em;
 
-
     @Autowired
     public SpringConfig(EntityManager em) {
         this.em = em;
     }
-
-
-
 
     @Bean
     public MemberService memberService() {
