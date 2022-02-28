@@ -8,7 +8,6 @@ class ItemServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
-
 	}
 
 }
