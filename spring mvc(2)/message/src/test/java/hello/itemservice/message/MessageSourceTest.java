@@ -21,7 +21,7 @@ public class MessageSourceTest {
     void helloMessage(){
         String result = ms.getMessage("hello", null, null);
         assertThat(result).isEqualTo("안녕");
-    }
+    }//
 
     @Test
     void notFoundMessageCode(){
