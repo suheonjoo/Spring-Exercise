@@ -31,7 +31,7 @@ public class HomeController {
         return "home";
     }
 
-    //@GetMapping("/")
+    @GetMapping("/")
     public String homeLogin(@CookieValue(name = "memberId",required = false) Long memberId, Model model){
         if(memberId==null){
             return "home";
@@ -60,6 +60,8 @@ public class HomeController {
         return "loginHome";
     }
 
+
+
     //@GetMapping("/")
     public String homeLoginV3(HttpServletRequest request, Model model){
 
@@ -80,7 +82,7 @@ public class HomeController {
         return "loginHome";
     }
 
-    //@GetMapping("/")
+    @GetMapping("/")
     public String homeLoginV3Spring(
             @SessionAttribute(name = SessionConst.LOGIN_MEMBER,required = false) Member loginMember, Model model){
 

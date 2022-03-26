@@ -6,6 +6,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+
 @Data
 public class ItemUpdateForm {
 
@@ -22,3 +23,6 @@ public class ItemUpdateForm {
     //수정시에는 자유롭게 변경할 수 있다
     private Integer quantity;
 }
+
+
+

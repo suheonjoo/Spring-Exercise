@@ -52,7 +52,8 @@ public class LoginController {
         return "redirect:/";
     }
 
-    //@PostMapping("/login")
+
+    @PostMapping("/login")
     public String loginV2(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletResponse response){
         if(bindingResult.hasErrors()){
             return "login/loginForm";
@@ -73,6 +74,7 @@ public class LoginController {
 
         return "redirect:/";
     }
+
 
     //@PostMapping("/login")
     public String loginV3(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletRequest request){
@@ -98,6 +100,8 @@ public class LoginController {
 
         return "redirect:/";
     }
+
+
 
     @PostMapping("/login")
     public String loginV4(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult,

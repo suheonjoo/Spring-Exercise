@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
 @Slf4j
-public class LoginInterceptor implements HandlerInterceptor {
+public class LogInterceptor implements HandlerInterceptor {
 
     public static final String LOG_ID = "logId";
 
