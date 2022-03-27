@@ -11,7 +11,6 @@ import javax.servlet.http.HttpSession;
 @Slf4j
 public class LoginCheckInterceptor implements HandlerInterceptor {
 
-
     //control o 로 오버라이드 될 거 가져옴
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
