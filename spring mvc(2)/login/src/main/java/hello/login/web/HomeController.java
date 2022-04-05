@@ -31,7 +31,7 @@ public class HomeController {
         return "home";
     }
 
-    @GetMapping("/")
+    //@GetMapping("/")
     public String homeLogin(@CookieValue(name = "memberId",required = false) Long memberId, Model model){
         if(memberId==null){
             return "home";
@@ -80,8 +80,8 @@ public class HomeController {
         return "loginHome";
     }
 
-    //@GetMapping("/")
-    public String homeLoginV3Spring(
+   //@GetMapping("/")
+    public String homeLoginV3Spring(//이미 로그인 된 사용자를 찾을 때 @SessionAttribute 사용함
             @SessionAttribute(name = SessionConst.LOGIN_MEMBER,required = false) Member loginMember, Model model){
 
         //세션에 회원데이터가 없으면 home
@@ -97,7 +97,7 @@ public class HomeController {
     @GetMapping("/")
     public String homeLoginV3ArgumentResolver(@Login Member loginMember, Model model){
 
-
+        log.info("loginMember={}",loginMember);
         //세션에 회원데이터가 없으면 home
         if(loginMember==null){
             return "home";

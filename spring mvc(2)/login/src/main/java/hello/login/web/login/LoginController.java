@@ -53,7 +53,7 @@ public class LoginController {
     }
 
 
-    @PostMapping("/login")
+    //@PostMapping("/login")
     public String loginV2(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletResponse response){
         if(bindingResult.hasErrors()){
             return "login/loginForm";
@@ -108,7 +108,7 @@ public class LoginController {
                           @RequestParam(defaultValue = "/") String redirectURL,
                           HttpServletRequest request){
         if(bindingResult.hasErrors()){
-            return "login/loginForm";
+            return "login/logiForm";
         }
         //LoginForm에 @Data를 해줘야 get으로 접근 가능
         Member loginMember = loginService.login(form.getLoginId(), form.getPassword());

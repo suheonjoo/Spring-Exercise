@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 @Slf4j
 public class LoginMemberArgumentResolver implements HandlerMethodArgumentResolver {
 
+    //@Login 애노테이션이 있으면서 Member 타입이면 해당 ArgumentResolver 가 사용된다.
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
         log.info("supportsParameter 실행");
@@ -25,6 +26,9 @@ public class LoginMemberArgumentResolver implements HandlerMethodArgumentResolve
         return hasLoginAnnotation && hasMemberType;
     }
 
+    //컨트롤러 호출 직전에 호출 되어서 필요한 파라미터 정보를 생성해준다
+    //여기서는 세션에 있는 로그인 회원 정보인 member 객체를 찾아서 반환해준다
+    //이후 스프링 MVC는 컨트롤러의 메서드를 호출하면서 여기에서 반환된 member 객체를 파라미터에 전달해준다.
     @Override
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
 
