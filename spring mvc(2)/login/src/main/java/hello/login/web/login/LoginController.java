@@ -27,7 +27,10 @@ public class LoginController {
 
     @GetMapping("/login")
     public String loginForm(@ModelAttribute("loginForm") LoginForm form){
+        //log.info("form = {}", LoginForm);//오류남 당연히
+        log.info("form = {}", form);
         return "login/loginForm";
+
     }
 
     //@PostMapping("/login")
@@ -91,6 +94,7 @@ public class LoginController {
 
         //로그인 성공
         //세션이 있으면 있는 세션을 반환, 없으면 신규 세션을 생성해서 반환함
+        //서블릿이 제공하는 세션임 (HttpSession)
         HttpSession session = request.getSession();
         //세션의 로그인 회원정보를 보관
         session.setAttribute(SessionConst.LOGIN_MEMBER,loginMember);
@@ -138,6 +142,9 @@ public class LoginController {
 
     @PostMapping("/logout")
     public String logoutV2(HttpServletRequest request){
+
+        //sessionManager.expire(request)
+
         HttpSession session = request.getSession(false);
         if(session!=null){
             session.invalidate();

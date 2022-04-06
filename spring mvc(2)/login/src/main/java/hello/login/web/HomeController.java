@@ -90,9 +90,14 @@ public class HomeController {
         }
 
         //세션이 유지되면 로그인으로 이동
+        //추가로 홈 화면에 화원 관련 정보도 출력해야 해서 member 데이터도 모델에 담아서 전달한다.
         model.addAttribute("member",loginMember);
         return "loginHome";
     }
+
+    
+
+
 
     @GetMapping("/")
     public String homeLoginV3ArgumentResolver(@Login Member loginMember, Model model){
