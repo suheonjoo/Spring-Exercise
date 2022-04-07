@@ -46,6 +46,7 @@ public class ErrorPageController {
             HttpServletRequest request, HttpServletResponse response){
         log.info("API errorPage 500");
 
+        //Map을 이용해서 에러 상태와 메세지를 넣는다
         Map<String,Object> result = new HashMap<>();
         Exception ex = (Exception) request.getAttribute(ERROR_EXCEPTION);
         result.put("status", request.getAttribute(ERROR_STATUS_CODE));
