@@ -23,7 +23,7 @@ public class ContextV2Test {
     /**
      * 전략 패턴 익명 내부 클래스
      */
-    @Test//-코드 조각을 파라미터로 넘긴다고 생각하면 더 자연스럽다. 
+    @Test//-코드 조각을 파라미터로 넘긴다고 생각하면 더 자연스럽다.
     void strategyV2() {
         ContextV2 context = new ContextV2();
         context.execute(new Strategy() {
