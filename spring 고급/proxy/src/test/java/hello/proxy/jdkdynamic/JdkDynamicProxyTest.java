@@ -10,7 +10,6 @@ import java.lang.reflect.Proxy;
 @Slf4j
 public class JdkDynamicProxyTest {
 
-
     @Test
     void dynamicA() {
         AInterface target = new AImpl();
