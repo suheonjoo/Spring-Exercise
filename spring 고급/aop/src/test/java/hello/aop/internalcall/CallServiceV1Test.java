@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Import;
 @Import(CallLogAspect.class)
 @SpringBootTest
 class CallServiceV1Test {
+
     @Autowired
     CallServiceV1 callServiceV1;
 

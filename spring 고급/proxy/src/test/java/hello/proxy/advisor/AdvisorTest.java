@@ -35,7 +35,7 @@ public class AdvisorTest {
     }
 
     @Test
-    @DisplayName("직접 만든 포인트컷")
+    @DisplayName("직접 만든 포인트컷") /////////한번 해보는 것임, 실제 사용할 일 없음
     void advisorTest2() {
         ServiceImpl target = new ServiceImpl();
         ProxyFactory proxyFactory = new ProxyFactory(target);
@@ -51,8 +51,8 @@ public class AdvisorTest {
     void advisorTest3() {
         ServiceImpl target = new ServiceImpl();
         ProxyFactory proxyFactory = new ProxyFactory(target);
-        NameMatchMethodPointcut pointcut = new NameMatchMethodPointcut();
 
+        NameMatchMethodPointcut pointcut = new NameMatchMethodPointcut();
         pointcut.setMappedNames("save");
         DefaultPointcutAdvisor advisor = new DefaultPointcutAdvisor(pointcut, new TimeAdvice());
 
