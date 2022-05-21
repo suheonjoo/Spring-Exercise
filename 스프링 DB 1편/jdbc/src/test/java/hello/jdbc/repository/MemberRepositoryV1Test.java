@@ -31,7 +31,9 @@ class MemberRepositoryV1Test {
         //나머지 설정은 따로 설정하지 않으면 기본으로 해줌
         repository = new MemberRepositoryV1(dataSource);
     }
+///////////
 
+    
     @Test
     void crud() throws SQLException, InterruptedException {
         log.info("start");
