@@ -22,10 +22,9 @@ public class SingletonService {
     }//이 private을 보고 싱글톤이구나 유추할수 있음
 
     public void logic(){
-        System.out.println("싱글통 객체 로직 호출");
+        System.out.println("싱글톤 객체 로직 호출");
     }
 
-
-
-
 }
+
+
