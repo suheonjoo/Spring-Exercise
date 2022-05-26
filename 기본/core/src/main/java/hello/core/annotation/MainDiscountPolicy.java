@@ -12,4 +12,7 @@ import java.lang.annotation.*;
 @Documented
 @Qualifier("mainDiscountPolicy")
 public @interface MainDiscountPolicy {//그러면 이 어노테이션을 쓰면 위에꺼 컨테이너 안에서는 다 동작해줌
+
 }
+
+
