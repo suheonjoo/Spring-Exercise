@@ -27,10 +27,10 @@ public class MemberServiceV3_3 {
                 bizLogic(fromId,toId,money);
     }
 
-    private void bizLogic(String fromId, String toId, int
-            money) throws SQLException {
+    private void bizLogic(String fromId, String toId, int money) throws SQLException {
         Member fromMember = memberRepository.findById(fromId);
         Member toMember = memberRepository.findById(toId);
+
         memberRepository.update(fromId, fromMember.getMoney() - money);
         validation(toMember);
         memberRepository.update(toId, toMember.getMoney() + money);
