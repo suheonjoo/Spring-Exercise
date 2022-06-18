@@ -80,6 +80,7 @@ class MemberServiceV4Test {
         log.info("memberService class={}", memberService.getClass());
 
         log.info("memberRepository class={}", memberRepository.getClass());
+
         Assertions.assertThat(AopUtils.isAopProxy(memberService)).isTrue();
         Assertions.assertThat(AopUtils.isAopProxy(memberRepository)).isFalse();
     }
@@ -92,8 +93,10 @@ class MemberServiceV4Test {
         Member memberB = new Member(MEMBER_B, 10000);
         memberRepository.save(memberA);
         memberRepository.save(memberB);
+
         //when
         memberService.accountTransfer(memberA.getMemberId(), memberB.getMemberId(), 2000);
+
         //then
         Member findMemberA = memberRepository.findById(memberA.getMemberId());
         Member findMemberB = memberRepository.findById(memberB.getMemberId());
@@ -109,14 +112,15 @@ class MemberServiceV4Test {
         Member memberEx = new Member(MEMBER_EX, 10000);
         memberRepository.save(memberA);
         memberRepository.save(memberEx);
+
         //when
         assertThatThrownBy(() -> memberService.accountTransfer(memberA.getMemberId(), memberEx.getMemberId(), 2000))
                 .isInstanceOf(IllegalStateException.class);
 
         //then
         Member findMemberA = memberRepository.findById(memberA.getMemberId());
-        Member findMemberEx =
-                memberRepository.findById(memberEx.getMemberId());
+        Member findMemberEx = memberRepository.findById(memberEx.getMemberId());
+
         //memberA의 돈이 롤백 되어야함
         assertThat(findMemberA.getMoney()).isEqualTo(10000);
         assertThat(findMemberEx.getMoney()).isEqualTo(10000);

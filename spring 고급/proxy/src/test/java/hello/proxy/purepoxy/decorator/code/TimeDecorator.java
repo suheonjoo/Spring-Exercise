@@ -8,7 +8,10 @@ public class TimeDecorator implements Component{
     private Component component;
     public TimeDecorator(Component component) {
         this.component = component;
+
+
     }
+
     @Override
     public String operation() {
         log.info("TimeDecorator 실행");

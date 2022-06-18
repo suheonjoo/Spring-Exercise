@@ -19,8 +19,8 @@ public class DecoratorPatternTest {
     void decorator1() {
         Component realComponent = new RealComponent();
         Component messageDecorator = new MessageDecorator(realComponent);
-        DecoratorPatternClient client = new
-                DecoratorPatternClient(messageDecorator);
+        DecoratorPatternClient client = new DecoratorPatternClient(messageDecorator);
+
         client.execute();
     }
 
@@ -29,6 +29,7 @@ public class DecoratorPatternTest {
         Component realComponent = new RealComponent();
         Component messageDecorator = new MessageDecorator(realComponent);
         Component timeDecorator = new TimeDecorator(messageDecorator);
+
         DecoratorPatternClient client = new DecoratorPatternClient(timeDecorator);
         client.execute();
     }

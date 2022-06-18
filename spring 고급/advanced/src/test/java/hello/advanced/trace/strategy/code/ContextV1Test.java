@@ -94,7 +94,7 @@ public class ContextV1Test {
     }
 
     /**
-     * 전략 패턴, 람다
+     * 전략 패턴, 람다 사용
      */
     @Test
     void strategyV4() {

@@ -9,7 +9,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * 트랜잭션 - @Transactional AOP
+ * 트랜잭션 - @Transactional AOP ********  @Transactional 적용한 버전
  */
 @Slf4j
 public class MemberServiceV3_3 {
@@ -27,13 +27,16 @@ public class MemberServiceV3_3 {
                 bizLogic(fromId,toId,money);
     }
 
+
     private void bizLogic(String fromId, String toId, int money) throws SQLException {
         Member fromMember = memberRepository.findById(fromId);
         Member toMember = memberRepository.findById(toId);
 
+
         memberRepository.update(fromId, fromMember.getMoney() - money);
         validation(toMember);
         memberRepository.update(toId, toMember.getMoney() + money);
+
     }
 
     private void validation(Member toMember) {

@@ -47,8 +47,10 @@ public class ExTranslatorV1Test {
                 log.info("saveId={}", memberId);
             } catch (MyDuplicateKeyException e) {
                 log.info("키 중복, 복구 시도");
+
                 String retryId = generateNewId(memberId);
                 log.info("retryId={}", retryId);
+
                 repository.save(new Member(retryId, 0));
             } catch (MyDbException e) {
                 log.info("데이터 접근 계층 예외", e);
@@ -57,6 +59,7 @@ public class ExTranslatorV1Test {
         }
 
         private String generateNewId(String memberId) {
+
             return memberId + new Random().nextInt(10000);
         }
     }
@@ -80,9 +83,10 @@ public class ExTranslatorV1Test {
             } catch (SQLException e) {
                 //h2 db
                 if (e.getErrorCode() == 23505) {
-                    throw new MyDuplicateKeyException(e);
+                    throw new MyDuplicateKeyException(e);//////여기서 내가 만든 런타임 오류로 변환해 줌
                 }
                 throw new MyDbException(e);
+
             } finally {
                 closeStatement(pstmt);
                 closeConnection(con);
