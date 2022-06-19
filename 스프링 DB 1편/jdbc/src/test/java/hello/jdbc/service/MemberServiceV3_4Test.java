@@ -49,7 +49,7 @@ class MemberServiceV3_4Test {
     @TestConfiguration
     static class TestConfig {
 
-        //@Autowired
+        //의존성 주입과 관계 없음 그냥 스프링이 자동으로 등록한 datasource 라는 빈을 불러서 쓴것임
         private final DataSource dataSource;
 
         public TestConfig(DataSource dataSource){
