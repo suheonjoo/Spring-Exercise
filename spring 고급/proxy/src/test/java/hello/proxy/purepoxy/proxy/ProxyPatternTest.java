@@ -12,6 +12,7 @@ public class ProxyPatternTest {
     void noProxyTest(){
         RealSubject realSubject = new RealSubject();
         ProxyPatternClient client = new ProxyPatternClient(realSubject);
+
         client.execute();
         client.execute();
         client.execute();
@@ -22,6 +23,7 @@ public class ProxyPatternTest {
         RealSubject realSubject = new RealSubject();
         CacheProxy cacheProxy = new CacheProxy(realSubject);
         ProxyPatternClient client = new ProxyPatternClient(cacheProxy);
+
         client.execute();
         client.execute();
         client.execute();
