@@ -24,3 +24,12 @@ public class TimeProxy extends ConcreteLogic {
         return result;
     }
 }
+
+
+
+
+
+
+
+
+
