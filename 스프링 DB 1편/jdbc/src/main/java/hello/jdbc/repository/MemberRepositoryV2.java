@@ -87,7 +87,7 @@ public class MemberRepositoryV2 {
             log.error("db error", e);
             throw e;
         } finally {
-//connection은 여기서 닫지 않는다.
+            //connection은 여기서 닫지 않는다.
             JdbcUtils.closeResultSet(rs);
             JdbcUtils.closeStatement(pstmt);
         }
@@ -125,7 +125,7 @@ public class MemberRepositoryV2 {
             log.error("db error", e);
             throw e;
         } finally {
-//connection은 여기서 닫지 않는다.
+        //connection은 여기서 닫지 않는다.
             JdbcUtils.closeStatement(pstmt);
         }
     }
