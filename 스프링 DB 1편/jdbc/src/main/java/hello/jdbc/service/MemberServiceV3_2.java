@@ -13,12 +13,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * 트랜잭션 - 트랜잭션 템플릿
+ * 트랜잭션 - 트랜잭션 템플릿  ********템플릿 콜백 패턴 사용함
  */
 @Slf4j
 public class MemberServiceV3_2 {
 
     //private final PlatformTransactionManager transactionManager;
+    //템플릿 콜백 패턴을 적용하려면 템플릿을 제공하는 클래스(고정 틀)를 작성해야 하는데, 스프링은 TransactionTemplate 라는 템플릿 클래스를 제공한다.
     private final TransactionTemplate txTemplate;
     private final MemberRepositoryV3 memberRepository;
 

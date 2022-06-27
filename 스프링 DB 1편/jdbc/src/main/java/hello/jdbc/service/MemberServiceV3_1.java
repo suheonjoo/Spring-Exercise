@@ -14,13 +14,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * 트랜잭션 - 트랜잭션 매니저
+ * 트랜잭션 - 트랜잭션 매니저 *****트랜잭션 매니저 사용 //이전에는 데이터소스를 통해 직접 커넥션을 얻었다면 이제는 트랜잭션 매니저가 데이터소스를 통해 커넥션을 얻음
  */
 @Slf4j
 @RequiredArgsConstructor
 public class MemberServiceV3_1 {
 
-    private final PlatformTransactionManager transactionManager;
+    private final PlatformTransactionManager transactionManager; //트랜잭션 매니저
     private final MemberRepositoryV3 memberRepository;
 
     public void accountTransfer(String fromId, String toId, int money) throws SQLException {

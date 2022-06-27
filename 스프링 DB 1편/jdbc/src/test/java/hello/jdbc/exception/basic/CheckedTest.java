@@ -17,8 +17,22 @@ public class CheckedTest {
     @Test
     void checked_throw() {
         Service service = new Service();
+        //service.callThrow();
         assertThatThrownBy(() -> service.callThrow())
                 .isInstanceOf(MyCheckedException.class);
+    }
+
+
+    @Test//내가 만든 테스트임 MyCheckedException -> Exception 으로 던짐 -> MyCheckedException로 잡을수 있나? 놉!!
+    void test(){
+
+        Service service = new Service();
+        try {
+            service.callThrow();
+        }catch (Exception e){
+            log.info("e = {}",e);
+        }
+
     }
 
     /**
@@ -44,7 +58,7 @@ public class CheckedTest {
             try {
                 repository.call();
             } catch (MyCheckedException e) {
-            //예외 처리 로직
+                //예외 처리 로직
                 log.info("예외 처리, message={}", e.getMessage(), e);
             }
 

@@ -58,7 +58,7 @@ public class UncheckedAppTest {
             try {
                 runSQL();
             } catch (SQLException e) {
-                throw new RuntimeSQLException(e);
+                throw new RuntimeSQLException(e);///////////런타임 에러(언체크 에러)로 변환해서 던져줌
             }
         }
 
