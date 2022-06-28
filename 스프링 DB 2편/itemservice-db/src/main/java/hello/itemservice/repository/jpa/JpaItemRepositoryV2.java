@@ -17,7 +17,8 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class JpaItemRepositoryV2 implements ItemRepository {
 
-    //////////////////////////
+    //JpaItemRepositoryV2 는 ItemRepository 를 구현한다. 그리고 SpringDataJpaItemRepository 를 생성주 주입을 통해 사용한다
+    //////////////////////////지금 여기서 SpringDataJpaItemRepository 사용해서 repository 이용함
     private final SpringDataJpaItemRepository repository;
 
     @Override
