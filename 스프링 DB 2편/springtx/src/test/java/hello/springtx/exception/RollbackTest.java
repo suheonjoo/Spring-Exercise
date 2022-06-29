@@ -45,7 +45,7 @@ public class RollbackTest {
 
     @Slf4j
     static class RollbackService {
-        //런타임 예외 발생: 롤백 @Transactional
+        //런타임 예외(언체크 예외) 발생: 롤백 @Transactional
         public void runtimeException() {
             log.info("call runtimeException");
             throw new RuntimeException();
@@ -58,13 +58,37 @@ public class RollbackTest {
             throw new MyException();
         }
 
-        //체크 예외 rollbackFor 지정: 롤백
+        //체크 예외인데도 rollbackFor 지정: 롤백
         @Transactional(rollbackFor = MyException.class)
         public void rollbackFor() throws MyException {
-              log.info("call rollbackFor");
-              throw new MyException();
+            log.info("call rollbackFor");
+            throw new MyException();
+        }
+    }
+
+    static class MyException extends Exception {
     }
 }
 
-static class MyException extends Exception {
-} }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

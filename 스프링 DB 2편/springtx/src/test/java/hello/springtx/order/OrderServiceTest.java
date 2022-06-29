@@ -40,8 +40,7 @@ class OrderServiceTest {
                 .isInstanceOf(RuntimeException.class);
 
         //then: 롤백되었으므로 데이터가 없어야 한다.
-        Optional<Order> orderOptional =
-                orderRepository.findById(order.getId());
+        Optional<Order> orderOptional = orderRepository.findById(order.getId());
         assertThat(orderOptional.isEmpty()).isTrue();
     }
 
@@ -57,9 +56,29 @@ class OrderServiceTest {
         } catch (NotEnoughMoneyException e) {
             log.info("고객에게 잔고 부족을 알리고 별도의 계좌로 입금하도록 안내");
         }
-        //then
 
+        //then
         Order findOrder = orderRepository.findById(order.getId()).get();
         assertThat(findOrder.getPayStatus()).isEqualTo("대기");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

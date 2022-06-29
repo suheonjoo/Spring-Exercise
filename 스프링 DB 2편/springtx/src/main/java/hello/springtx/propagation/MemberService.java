@@ -42,3 +42,20 @@ public class MemberService {
         log.info("== logRepository 호출 종료 ==");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
