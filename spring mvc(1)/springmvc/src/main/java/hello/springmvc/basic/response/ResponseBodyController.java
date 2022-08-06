@@ -17,7 +17,7 @@ import java.io.IOException;
 @Slf4j
 //@Controller
 //@ResponseBody
-@RestController
+@RestController//Todo: 이거 있는거 잊지 말기
 public class ResponseBodyController {
 
     @GetMapping("/response-body-string-v1")
@@ -59,3 +59,12 @@ public class ResponseBodyController {
 
 
 }
+
+
+
+
+
+
+
+
+

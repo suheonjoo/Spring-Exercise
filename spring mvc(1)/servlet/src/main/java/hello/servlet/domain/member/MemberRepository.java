@@ -16,12 +16,13 @@ public class MemberRepository {//command shift t로 테스트 코드 바로 만�
     //우리 싱글톤 만들 것임
     private static final MemberRepository instance = new MemberRepository();
 
-    //우리 싱글톤 만들때는 일단 private으로 생성자를 일단 막아야 함
+
 
     public static MemberRepository getInstance(){
         return instance;
     }// 아래 와 같이 접근 막아줘서 이 함수로 접근해줘야 한다
 
+    //우리 싱글톤 만들때는 일단 private으로 생성자를 일단 막아야 함
     private MemberRepository() {
     }
 

@@ -3,6 +3,7 @@ package hello.servlet.web.frontcontroller;
 import java.util.HashMap;
 import java.util.Map;
 
+//modelView 가 viewResolver 역할을 해주느 것임
 public class ModelView {
     private String viewName;
     private Map<String,Object> model = new HashMap<>();

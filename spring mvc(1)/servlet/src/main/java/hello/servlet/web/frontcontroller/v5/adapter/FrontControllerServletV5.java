@@ -62,12 +62,12 @@ public class FrontControllerServletV5 extends HelloServlet {
 
         //ControllerV3HandlerAdapter
         //handlerAdapters.iter 하면 포문 자동으로 만들어줌
-        MyHandlerAdapter adapter=getHandlerAdapter(handler);
+        MyHandlerAdapter adapter= getHandlerAdapter(handler);
 
         //위에서 찾은 어뎁터 정보 가지고 request, reponse, handler를 전달하여 modelview에 전달해줌
         ModelView mv = adapter.handle(request, response, handler);
 
-        //전달 받은 모델뷰로 myview를 생성-> 그 후 렌더링
+        //전달 받은 모델뷰로 MyView 를 생성-> 그 후 렌더링
         MyView view = viewResolver(mv.getViewName());
         view.render(mv.getModel(), request, response);
 
