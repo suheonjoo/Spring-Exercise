@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
     public void createUser(Account account){
 
         Role role = roleRepository.findByRoleName("ROLE_USER");
-        Set<Role> roles = new HashSet<>();
+        Set<Role> roles = new HashSet<>();// 이걸 집합로 받았네  유일하니깐 집합으로 받은 것 같음
         roles.add(role);
         account.setUserRoles(roles);
         userRepository.save(account);

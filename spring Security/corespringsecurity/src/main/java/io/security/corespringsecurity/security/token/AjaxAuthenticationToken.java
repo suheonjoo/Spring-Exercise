@@ -11,6 +11,7 @@ public class AjaxAuthenticationToken extends AbstractAuthenticationToken {
     private final Object principal;
     private Object credentials;
 
+    //사용자 정보를 담는 생성자
     public AjaxAuthenticationToken(Object principal, Object credentials) {
         super(null);
         this.principal = principal;
@@ -18,6 +19,7 @@ public class AjaxAuthenticationToken extends AbstractAuthenticationToken {
         setAuthenticated(false);
     }
 
+    //인증 이후의 결과를 담는 생성자
     public AjaxAuthenticationToken(Object principal, Object credentials, Collection<? extends GrantedAuthority> authorities) {
         super(authorities);
         this.principal = principal;

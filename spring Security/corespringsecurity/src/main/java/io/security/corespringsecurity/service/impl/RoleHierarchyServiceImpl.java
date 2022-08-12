@@ -24,6 +24,8 @@ public class RoleHierarchyServiceImpl implements RoleHierarchyService {
 
         Iterator<RoleHierarchy> itr = rolesHierarchy.iterator();
         StringBuilder concatedRoles = new StringBuilder();
+
+        //계층 관계를 우리가 원하는 형태의 문자열로 만들기
         while (itr.hasNext()) {
             RoleHierarchy roleHierarchy = itr.next();
             if (roleHierarchy.getParentName() != null) {

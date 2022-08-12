@@ -32,6 +32,7 @@ public class PermitAllFilter extends FilterSecurityInterceptor {
         boolean permitAll = false;
         HttpServletRequest request = ((FilterInvocation) object).getRequest();
         for(RequestMatcher requestMatcher : permitAllRequestMatchers){
+            //정보가 매칭되면 permitall 을 true 로 줌
             if(requestMatcher.matches(request)){
                 permitAll = true;
                 break;

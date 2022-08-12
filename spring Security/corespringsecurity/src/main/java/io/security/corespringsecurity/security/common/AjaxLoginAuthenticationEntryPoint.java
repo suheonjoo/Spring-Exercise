@@ -17,6 +17,15 @@ public class AjaxLoginAuthenticationEntryPoint implements AuthenticationEntryPoi
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
+    /**
+     * 익명사용자가 인증이 필요한 자원에 접근 했을 경우임,
+     * 인증을 받기 않았기에 401 상태를 보내는 코드임
+     * @param request
+     * @param response
+     * @param authException
+     * @throws IOException
+     * @throws ServletException
+     */
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
 

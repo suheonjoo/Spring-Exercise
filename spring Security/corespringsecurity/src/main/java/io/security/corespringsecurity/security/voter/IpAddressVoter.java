@@ -41,6 +41,7 @@ public class IpAddressVoter implements AccessDecisionVoter<Object> {
 
         for(String ipAddress : accessIpList){
             if(remoteAddress.equals(ipAddress)){
+                //계속 심의 검사를 해야하니깐 abstain 상태로 반환
                 return ACCESS_ABSTAIN;
             }
         }

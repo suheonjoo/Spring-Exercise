@@ -32,19 +32,26 @@ public final class AjaxLoginConfigurer<H extends HttpSecurityBuilder<H>> extends
     public void configure(H http) {
 
         if(authenticationManager == null){
+            //공유 객체를 가져옴
             authenticationManager = http.getSharedObject(AuthenticationManager.class);
         }
+
+        //필터들을 저장하고
         getAuthenticationFilter().setAuthenticationManager(authenticationManager);
         getAuthenticationFilter().setAuthenticationSuccessHandler(successHandler);
         getAuthenticationFilter().setAuthenticationFailureHandler(failureHandler);
 
+        //공유 객체에 저장함
         SessionAuthenticationStrategy sessionAuthenticationStrategy = http
                 .getSharedObject(SessionAuthenticationStrategy.class);
+
         if (sessionAuthenticationStrategy != null) {
             getAuthenticationFilter().setSessionAuthenticationStrategy(sessionAuthenticationStrategy);
         }
+
         RememberMeServices rememberMeServices = http
                 .getSharedObject(RememberMeServices.class);
+
         if (rememberMeServices != null) {
             getAuthenticationFilter().setRememberMeServices(rememberMeServices);
         }

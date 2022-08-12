@@ -25,7 +25,12 @@ public class FormAuthenticationSuccessHandler extends SimpleUrlAuthenticationSuc
     @Override
     public void onAuthenticationSuccess(final HttpServletRequest request, final HttpServletResponse response, final Authentication authentication) throws IOException {
 
-        setDefaultTargetUrl("/");
+
+        setDefaultTargetUrl("/");// 이거 부모클래스 꺼임, 왜냐면 자식이 오버라이드 해서 만들지 않았잖음
+        // -> 이게 실제 구현체임 거기서 setter 로 url 설정 바꾼것임 그래서 모두 this, super. getDefault.. 하면 this 랑 super 이랑 같음
+        // 지글 오버라이드 했고 실제 구현체라고 생각하면 됨 config에서 호출도 이거 핸들러로 했고
+
+        // 다 생각하지 말고 이거 클래스 상속 생각하사함 자식은 부모 클래스꺼 오버라이드 하지 않으면 자식 클래스에서 다 쓸수 있지 않냐 그거임 지금 부모 메서드 사용하 것임
 
         SavedRequest savedRequest = requestCache.getRequest(request, response);
 
@@ -36,4 +41,5 @@ public class FormAuthenticationSuccessHandler extends SimpleUrlAuthenticationSuc
             redirectStrategy.sendRedirect(request, response, getDefaultTargetUrl());
         }
     }
+
 }

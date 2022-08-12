@@ -41,6 +41,7 @@ public class FormAuthenticationProvider implements AuthenticationProvider {
             throw new BadCredentialsException("Invalid password");
         }
 
+        //secretKey를 가져와서 작업하는 코드
         String secretKey = ((FormWebAuthenticationDetails) authentication.getDetails()).getSecretKey();
         if (secretKey == null || !secretKey.equals("secret")) {
             throw new IllegalArgumentException("Invalid Secret");

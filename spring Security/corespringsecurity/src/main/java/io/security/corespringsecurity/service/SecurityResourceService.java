@@ -25,6 +25,10 @@ public class SecurityResourceService {
         this.accessIpRepository = accessIpRepository;
     }
 
+    /**
+     * resourcelist 를 가져오는 것임
+     * @return
+     */
     public LinkedHashMap<RequestMatcher, List<ConfigAttribute>> getResourceList(){
 
         LinkedHashMap<RequestMatcher, List<ConfigAttribute>> result = new LinkedHashMap<>();
@@ -34,7 +38,9 @@ public class SecurityResourceService {
             re.getRoleSet().forEach(role -> {
                 configAttributeList.add(new SecurityConfig(role.getRoleName()));
             });
-            result.put(new AntPathRequestMatcher(re.getResourceName()),configAttributeList);
+            result.put(new
+
+                    AntPathRequestMatcher(re.getResourceName()),configAttributeList);
 
         });
         return result;

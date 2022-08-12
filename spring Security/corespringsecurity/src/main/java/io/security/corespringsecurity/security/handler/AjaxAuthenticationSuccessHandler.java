@@ -23,6 +23,7 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
                                         Authentication authentication) throws IOException, ServletException {
+
         Account account = (Account) authentication.getPrincipal();
 
         response.setStatus(HttpStatus.OK.value());
@@ -31,6 +32,8 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
 //        HttpSession session = request.getSession();
 //        session.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
 
+        //objectmapper 가 json 형태로 변환하고 반환함
+        //그리고 여기서 그먄 account 객체로 넘겨 줬는데 이거 dto 로 바꿔서 넘겨주는게 좋다고 함 아니면 entity 그대로 보내게 되니깐
         mapper.writeValue(response.getWriter(), account);
     }
 }

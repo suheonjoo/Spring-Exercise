@@ -22,7 +22,8 @@ public class AjaxLoginProcessingFilter extends AbstractAuthenticationProcessingF
     private static final String X_REQUESTED_WITH = "X-Requested-With";
 
     private ObjectMapper objectMapper = new ObjectMapper();
-    
+
+    //해당 url, http 메소드와 일치되면 필터가 잘동되도록
     public AjaxLoginProcessingFilter() {
         super(new AntPathRequestMatcher("/ajaxLogin", "POST"));
     }
@@ -40,6 +41,8 @@ public class AjaxLoginProcessingFilter extends AbstractAuthenticationProcessingF
         if (StringUtils.isEmpty(accountDto.getUsername()) || StringUtils.isEmpty(accountDto.getPassword())) {
             throw new AuthenticationServiceException("Username or Password not provided");
         }
+
+        //ajax 인증 토큰을 가져옴
         AjaxAuthenticationToken token = new AjaxAuthenticationToken(accountDto.getUsername(),accountDto.getPassword());
 
         return this.getAuthenticationManager().authenticate(token);

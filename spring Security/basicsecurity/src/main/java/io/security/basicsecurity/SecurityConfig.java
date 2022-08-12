@@ -96,14 +96,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .maximumSessions(1)
                 .maxSessionsPreventsLogin(false);
 
-        new Thread(
-                new Runnable() {
-                    @Override
-                    public void run() {
-                        System.out.println("wwww");
-                    }
-                }
-        ).start();
+
 
 
 

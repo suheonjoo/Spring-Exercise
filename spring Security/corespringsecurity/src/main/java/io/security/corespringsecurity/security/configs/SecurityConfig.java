@@ -5,6 +5,7 @@ import io.security.corespringsecurity.security.factory.UrlResourcesMapFactoryBea
 import io.security.corespringsecurity.security.filter.PermitAllFilter;
 import io.security.corespringsecurity.security.handler.FormAccessDeniedHandler;
 import io.security.corespringsecurity.security.metadatasource.UrlFilterInvocationSecurityMetadataSource;
+import io.security.corespringsecurity.security.provider.CustomAuthenticationProvider;
 import io.security.corespringsecurity.security.provider.FormAuthenticationProvider;
 import io.security.corespringsecurity.security.voter.IpAddressVoter;
 import io.security.corespringsecurity.service.SecurityResourceService;
@@ -26,6 +27,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.AccessDeniedHandler;
@@ -52,6 +54,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private SecurityResourceService securityResourceService;
 
+    @Autowired
+    private UserDetailsService userDetailsService;
+
     private String[] permitAllResources = {"/", "/login", "/user/login/**"};
 
     /**
@@ -64,9 +69,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         web.ignoring().requestMatchers(PathRequest.toStaticResources().atCommonLocations());
     }
 
+    /**
+     * 우리가 만드든
+     * @param auth
+     * @throws Exception
+     */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(authenticationProvider());
+
+        //auth.userDetailsService(userDetailsService); 우리가 만든 userDetailService 잉용
+
+        // 위에 코드의 업그레이드인데 추가적인 인증처리를 위해 이걸 provider를 사용한 것임, 이전에는 username, 궈한만 확인 함
+        auth.authenticationProvider(authenticationProvider()); //우리가 만든 provider로 provider 역할을 함
+    }
+
+    @Bean
+    public AuthenticationProvider authenticationProvider(){
+        //return new CustomAuthenticationProvider();
+        return new FormAuthenticationProvider(passwordEncoder());
     }
 
     @Override
@@ -103,15 +123,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 
-    @Bean
-    public AuthenticationProvider authenticationProvider(){
-        return new FormAuthenticationProvider(passwordEncoder());
-    }
-
     public AccessDeniedHandler accessDeniedHandler() {
         FormAccessDeniedHandler commonAccessDeniedHandler = new FormAccessDeniedHandler();
         commonAccessDeniedHandler.setErrorPage("/denied");
         return commonAccessDeniedHandler;
+    }
+
+    @Bean
+    public FilterRegistrationBean filterRegistrationBean() throws Exception {
+        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+        filterRegistrationBean.setFilter(customFilterSecurityInterceptor());
+        filterRegistrationBean.setEnabled(false);
+
+        return filterRegistrationBean;
     }
 
     @Bean
@@ -122,14 +146,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         permitAllFilter.setAccessDecisionManager(affirmativeBased());
         permitAllFilter.setAuthenticationManager(authenticationManagerBean());
         return permitAllFilter;
-    }
-
-    @Bean
-    public FilterRegistrationBean filterRegistrationBean() throws Exception {
-        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
-        filterRegistrationBean.setFilter(customFilterSecurityInterceptor());
-        filterRegistrationBean.setEnabled(false);
-        return filterRegistrationBean;
     }
 
     private AccessDecisionManager affirmativeBased() {
