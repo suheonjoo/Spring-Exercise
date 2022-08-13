@@ -9,7 +9,7 @@ public class SpamFilteringCommentService extends CommentService {
             super.addComment(comment);
         }
     }
-
+    //http가 있으면 출력을 하지 않음
     private boolean isSpam(String comment) {
         return comment.contains("http");
     }

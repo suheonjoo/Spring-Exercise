@@ -9,7 +9,7 @@ public class FacadeInSpring {
 
     public static void main(String[] args) {
         MailSender mailSender = new JavaMailSenderImpl();
-
+        //클리언트는 MailSender, PlatformTransactionManager 를 사용하고 그 안에 디테일은 JavaMailSenderImpl, JdbcTransactionManager 임
         PlatformTransactionManager platformTransactionManager = new JdbcTransactionManager();
     }
 }

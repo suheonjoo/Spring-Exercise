@@ -7,6 +7,7 @@ public class TrimmingCommentService extends CommentService {
         super.addComment(trim(comment));
     }
 
+    //...이 출력안되게 하는 trim임
     private String trim(String comment) {
         return comment.replace("...", "");
     }
