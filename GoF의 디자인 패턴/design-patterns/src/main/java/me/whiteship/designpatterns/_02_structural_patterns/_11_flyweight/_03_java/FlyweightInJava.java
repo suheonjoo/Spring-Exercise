@@ -5,6 +5,8 @@ public class FlyweightInJava {
     public static void main(String[] args) {
         Integer i1 = Integer.valueOf(10);
         Integer i2 = Integer.valueOf(10);
+
+        // 값 비교 아니라 캐싱 되었냐 비교를 위해 equal 대신 == 사용함
         System.out.println(i1 == i2);
     }
 }

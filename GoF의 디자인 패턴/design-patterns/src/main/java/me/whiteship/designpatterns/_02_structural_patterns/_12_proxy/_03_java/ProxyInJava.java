@@ -21,7 +21,7 @@ public class ProxyInJava {
         return  (GameService) Proxy.newProxyInstance(this.getClass().getClassLoader(),
                 new Class[]{GameService.class}, (proxy, method, args) -> {
                     System.out.println("O");
-                    method.invoke(target, args);
+                    method.invoke(target, args);// 어떤 메서드를 실행할 것이냐? : target
                     System.out.println("ㅁ");
                     return null;
                 });

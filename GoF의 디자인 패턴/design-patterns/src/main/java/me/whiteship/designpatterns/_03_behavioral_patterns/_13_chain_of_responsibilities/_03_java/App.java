@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
-@ServletComponentScan
+@ServletComponentScan// 서블릿을 스캔해서 빈을 등록해줌 여기서 @WebFilter(urlPatterns = "/hello")를 스캔해줌
 @SpringBootApplication
 public class App {
 
