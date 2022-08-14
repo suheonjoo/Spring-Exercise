@@ -10,6 +10,7 @@ public class Private implements State {
 
     @Override
     public void addReview(String review, Student student) {
+        //지금 여러개 chain 해서 쓰는데 이걸 리팩토링할수 있음 2개의 chain을 하나의 매서드로 묵을수 있음
         if (this.onlineCourse.getStudents().contains(student)) {
             this.onlineCourse.getReviews().add(review);
         } else {

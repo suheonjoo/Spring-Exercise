@@ -10,7 +10,7 @@ public interface ShipFactory {
         return ship;
     }
 
-    void sendEmailTo(String email, Ship ship);
+    void sendEmailTo(String email, Ship ship);//이것도 접근 지정자를 default로 해서 하위 클래스가 무조건 정의하도록 함
 
     Ship createShip();// 접근 지정자를 default로 두어서 하위 클래스가 무조건 정의를 해야하는 방식으로 선언함
 

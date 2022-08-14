@@ -14,7 +14,7 @@ public class ObserverInJava {
 
     static class Subject extends Observable {
         public void add(String message) {
-            setChanged();
+            setChanged();// 상태가 변경되었다고 해야지만 알림을 받을 수 있음
             notifyObservers(message);
         }
     }

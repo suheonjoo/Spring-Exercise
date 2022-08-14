@@ -20,3 +20,21 @@ public class FrontDesk {
         restaurant.dinner(guest.getId(), dateTime);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

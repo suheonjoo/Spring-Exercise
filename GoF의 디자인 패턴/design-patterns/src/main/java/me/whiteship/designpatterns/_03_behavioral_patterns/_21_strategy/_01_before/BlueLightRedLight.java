@@ -1,6 +1,6 @@
 package me.whiteship.designpatterns._03_behavioral_patterns._21_strategy._01_before;
 
-public class BlueLightRedLight {
+public class BlueLightRedLight {//
 
     private int speed;
 

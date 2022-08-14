@@ -6,7 +6,7 @@ import java.util.concurrent.SubmissionPublisher;
 public class FlowInJava {
 
     public static void main(String[] args) throws InterruptedException {
-        Flow.Publisher<String> publisher = new SubmissionPublisher<>();
+        Flow.Publisher<String> publisher = new SubmissionPublisher<>();//비동기적으로 처리한 것임
 
         Flow.Subscriber<String> subscriber = new Flow.Subscriber<String>() {
 

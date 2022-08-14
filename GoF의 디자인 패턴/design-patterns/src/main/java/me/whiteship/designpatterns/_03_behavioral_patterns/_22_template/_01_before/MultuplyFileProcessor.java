@@ -12,6 +12,8 @@ public class MultuplyFileProcessor {
     }
 
     public int process() {
+        //try안에 리소스를 정의하면 try catch 문 끝나고 리소스를 close 안해도 됨 , 컴파일하는 코드가 자동적으로 생성됨
+        //자바 8문법임
         try(BufferedReader reader = new BufferedReader(new FileReader(path))) {
             int result = 0;
             String line = null;

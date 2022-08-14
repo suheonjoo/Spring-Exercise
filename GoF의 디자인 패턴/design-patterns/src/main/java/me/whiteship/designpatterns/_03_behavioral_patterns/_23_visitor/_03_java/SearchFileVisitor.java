@@ -36,7 +36,7 @@ public class SearchFileVisitor implements FileVisitor<Path> {
         return FileVisitResult.CONTINUE;
     }
 
-    @Override
+    @Override//순회가 다 끊난 경우
     public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
         if (Files.isSameFile(startingDirectory, dir)) {
             System.out.println("search end");

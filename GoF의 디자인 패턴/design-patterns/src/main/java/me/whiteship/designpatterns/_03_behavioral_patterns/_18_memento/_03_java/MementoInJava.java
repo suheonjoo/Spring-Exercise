@@ -14,6 +14,7 @@ public class MementoInJava {
 
         // TODO 직렬화
         try(FileOutputStream fileOut = new FileOutputStream("GameSave.hex");
+            //여기서 아무 파일 형식이든 상관 없음, 그냥 hex가 우리가 볼때 편해서 여기선 이렇게 한것임
         ObjectOutputStream out = new ObjectOutputStream(fileOut))
         {
             out.writeObject(game);

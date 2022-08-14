@@ -26,6 +26,8 @@ public class PropertyChangeExample {
         }
 
         public void add(String message) {
+            //변결될때만 해당 옵져버가 등록 되도록
+
             support.firePropertyChange("eventName", null, message);
         }
     }

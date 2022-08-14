@@ -16,7 +16,7 @@ public class ChatServer {
         } else {
             List<Subscriber> list = new ArrayList<>();
             list.add(subscriber);
-            this.subscribers.put(subject, list);
+            this.subscribers.put(subject, list);// 위에 2줄을 줄일려고 List.of를 사용하면 안됨 그러면 리스트가 변경 불가능해짐 add 사용 불가!, immutable
         }
     }
 
@@ -29,7 +29,7 @@ public class ChatServer {
     public void sendMessage(User user, String subject, String message) {
         if (this.subscribers.containsKey(subject)) {
             String userMessage = user.getName() + ": " + message;
-            this.subscribers.get(subject).forEach(s -> s.handleMessage(userMessage));
+            this.subscribers.get(subject).forEach(s -> s.handleMessage(userMessage));///
         }
     }
 

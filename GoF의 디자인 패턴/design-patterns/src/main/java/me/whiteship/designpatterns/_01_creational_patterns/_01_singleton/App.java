@@ -17,6 +17,22 @@ public class App {
         }
 
         System.out.println(settings == settings1);
+
+
+
+
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class StrategyInSpring {
 
     public static void main(String[] args) {
+        //여기 전략에 따라 applicationContext가 나눠져 있음
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext();
         ApplicationContext applicationContext1 = new FileSystemXmlApplicationContext();
         ApplicationContext applicationContext2 = new AnnotationConfigApplicationContext();
