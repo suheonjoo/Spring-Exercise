@@ -10,7 +10,7 @@ public abstract class RequestHandler {
         this.nextHandler = nextHandler;
     }
 
-    public void handle(Request request) {
+    public void handle(Request request) {//이거 재귀 함수 형식으로 만든 것임
         if (nextHandler != null) {
             nextHandler.handle(request);
         }

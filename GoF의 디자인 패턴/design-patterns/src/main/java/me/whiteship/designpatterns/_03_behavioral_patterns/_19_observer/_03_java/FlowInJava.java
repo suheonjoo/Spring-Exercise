@@ -8,7 +8,7 @@ public class FlowInJava {
     public static void main(String[] args) throws InterruptedException {
         Flow.Publisher<String> publisher = new SubmissionPublisher<>();//비동기적으로 처리한 것임
 
-        Flow.Subscriber<String> subscriber = new Flow.Subscriber<String>() {
+        Flow.Subscriber<String> subscriber = new Flow.Subscriber<String>() { //바로 객체 정의
 
             private Flow.Subscription subscription;
 

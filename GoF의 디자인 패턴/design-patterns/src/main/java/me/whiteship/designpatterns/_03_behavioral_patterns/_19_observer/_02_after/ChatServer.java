@@ -29,8 +29,29 @@ public class ChatServer {
     public void sendMessage(User user, String subject, String message) {
         if (this.subscribers.containsKey(subject)) {
             String userMessage = user.getName() + ": " + message;
-            this.subscribers.get(subject).forEach(s -> s.handleMessage(userMessage));///
+            this.subscribers.get(subject).forEach(s -> s.handleMessage(userMessage));
         }
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

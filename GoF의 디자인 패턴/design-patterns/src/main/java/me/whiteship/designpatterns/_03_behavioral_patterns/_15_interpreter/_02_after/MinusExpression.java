@@ -14,7 +14,7 @@ public class MinusExpression implements PostfixExpression {
     }
 
     @Override
-    public int interpret(Map<Character, Integer> context) {
+    public int interpret(Map<Character, Integer> context) {// 이거 트리 구조로 각각의 Expression 으로 variable 만날때까지 쭉쭉 들어감
         return left.interpret(context) - right.interpret(context);
     }
 }

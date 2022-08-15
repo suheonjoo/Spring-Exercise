@@ -5,7 +5,7 @@ import java.util.List;
 
 public class OnlineCourse {
 
-    private State state = new Draft(this);
+    private State state = new Draft(this);// 초기 상태
 
     private List<Student> students = new ArrayList<>();
 

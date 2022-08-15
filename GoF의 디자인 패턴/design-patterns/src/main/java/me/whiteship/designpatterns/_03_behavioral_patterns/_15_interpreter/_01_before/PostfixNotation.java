@@ -29,7 +29,7 @@ public class PostfixNotation {
                     numbers.push(left - right);
                     break;
                 default:
-                    numbers.push(Integer.parseInt(c + ""));
+                    numbers.push(Integer.parseInt(c + ""));//여기 int로 바꿔도 autoboxing을 int 를 Integer 로 바꿔줌
             }
         }
 

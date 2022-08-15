@@ -25,7 +25,7 @@ public class CommandInSpring {
                 .withTableName("command")
                 .usingGeneratedKeyColumns("id");
 
-        Map<String, Object> data = new HashMap<>();
+        Map<String, Object> data = new HashMap<>();//여기 Map 에 있는 것이 Receiver 가 되는 것임
         data.put("name", command.getClass().getSimpleName());
         data.put("when", LocalDateTime.now());
         insert.execute(data);
