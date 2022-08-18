@@ -4,8 +4,11 @@ public class Client {
 
     public static void main(String[] args) {
         OnlineCourse onlineCourse = new OnlineCourse();
+
         Student student = new Student("whiteship");
         Student keesun = new Student("keesun");
+
+
         keesun.addPrivate(onlineCourse);
 
         onlineCourse.addStudent(student);

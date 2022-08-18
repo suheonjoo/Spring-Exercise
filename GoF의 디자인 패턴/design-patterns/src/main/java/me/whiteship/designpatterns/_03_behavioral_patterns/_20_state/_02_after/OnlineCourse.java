@@ -19,6 +19,13 @@ public class OnlineCourse {
         this.state.addReview(review, student);
     }
 
+    public void changeState(State state) {
+        this.state = state;
+    }
+
+    /**
+     * getter
+     */
     public State getState() {
         return state;
     }
@@ -29,9 +36,5 @@ public class OnlineCourse {
 
     public List<String> getReviews() {
         return reviews;
-    }
-
-    public void changeState(State state) {
-        this.state = state;
     }
 }
