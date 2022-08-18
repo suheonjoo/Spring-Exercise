@@ -20,3 +20,6 @@ public class Client {
         chatServer.sendMessage(user2, "디자인패턴", "옵저버 패턴 장, 단점 보는 중");
     }
 }
+
+//tes
+
