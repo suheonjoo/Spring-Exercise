@@ -37,6 +37,7 @@ public class StudyDashboard {
         ExecutorService service = Executors.newFixedThreadPool(8);
         CountDownLatch latch = new CountDownLatch(totalNumberOfEvents);
 
+        ///////////////////////
         for (int index = 1 ; index <= totalNumberOfEvents ; index++) {
             int eventId = index;
             service.execute(new Runnable() {

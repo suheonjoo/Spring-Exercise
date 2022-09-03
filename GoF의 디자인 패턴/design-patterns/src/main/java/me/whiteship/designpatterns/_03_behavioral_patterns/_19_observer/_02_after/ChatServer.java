@@ -27,6 +27,7 @@ public class ChatServer {
     }
 
     public void sendMessage(User user, String subject, String message) {
+        //루프를 돌면서 각 Observer 를 Update
         if (this.subscribers.containsKey(subject)) {
             String userMessage = user.getName() + ": " + message;
             this.subscribers.get(subject).forEach(s -> s.handleMessage(userMessage));

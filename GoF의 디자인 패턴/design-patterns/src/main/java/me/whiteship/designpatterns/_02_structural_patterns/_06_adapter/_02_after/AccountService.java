@@ -2,7 +2,7 @@ package me.whiteship.designpatterns._02_structural_patterns._06_adapter._02_afte
 
 public class AccountService {
 
-    public Account findAccountByUsername(String username) {
+    public Account findAccountByUsername(String username) { //Account 만들기
         Account account = new Account();
         account.setName(username);
         account.setPassword(username);

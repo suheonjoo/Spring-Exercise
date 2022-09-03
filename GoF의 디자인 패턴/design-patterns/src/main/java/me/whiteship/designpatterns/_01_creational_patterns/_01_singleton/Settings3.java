@@ -5,7 +5,7 @@ package me.whiteship.designpatterns._01_creational_patterns._01_singleton;
  */
 public class Settings3 {
 
-    private static volatile Settings3 instance;
+    private static volatile Settings3 instance;  //volatile 키워드 사용!
 
     private Settings3() { }
 

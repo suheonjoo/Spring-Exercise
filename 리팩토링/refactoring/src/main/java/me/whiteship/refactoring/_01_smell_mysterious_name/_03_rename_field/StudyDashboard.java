@@ -19,11 +19,15 @@ public class StudyDashboard {
     /**
      * 스터디 리뷰 이슈에 작성되어 있는 리뷰어 목록과 리뷰를 읽어옵니다.
      * @throws IOException
+     *
+     * //메서드 이름이 Review인에 안에 변수 이름이 comments여서 reviews로 바꿈
+     *
      */
     private void loadReviews() throws IOException {
         GitHub gitHub = GitHub.connect();
         GHRepository repository = gitHub.getRepository("whiteship/live-study");
         GHIssue issue = repository.getIssue(30);
+
 
         List<GHIssueComment> reviews = issue.getComments();
         for (GHIssueComment review : reviews) {

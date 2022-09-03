@@ -16,6 +16,7 @@ public class StudyDashboard {
 
     private Set<String> reviews = new HashSet<>();
 
+
     private void studyReviews(GHIssue issue) throws IOException {
         List<GHIssueComment> comments = issue.getComments();
         for (GHIssueComment comment : comments) {

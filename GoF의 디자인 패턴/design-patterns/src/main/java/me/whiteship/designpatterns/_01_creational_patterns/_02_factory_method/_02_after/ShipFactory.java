@@ -5,7 +5,10 @@ public interface ShipFactory {
     default Ship orderShip(String name, String email) {
         validate(name, email);
         prepareFor(name);
+
+        // ship 을 만듦
         Ship ship = createShip();
+
         sendEmailTo(email, ship);
         return ship;
     }
@@ -23,8 +26,23 @@ public interface ShipFactory {
         }
     }
 
+    //자바9부턴 인터페이스에 private 쓸수 있게 됐음!!!!!
     private void prepareFor(String name) {
         System.out.println(name + " 만들 준비 중");
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
