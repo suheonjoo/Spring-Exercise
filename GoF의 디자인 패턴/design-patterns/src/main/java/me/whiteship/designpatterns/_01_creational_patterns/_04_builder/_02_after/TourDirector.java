@@ -25,6 +25,7 @@ public class TourDirector {
     public TourPlan longBeachTrip() {
         return tourPlanBuilder.title("롱비치")
                 .startDate(LocalDate.of(2021, 7, 15))
+                .addPlan(1,"추가")
                 .getPlan();
     }
 }

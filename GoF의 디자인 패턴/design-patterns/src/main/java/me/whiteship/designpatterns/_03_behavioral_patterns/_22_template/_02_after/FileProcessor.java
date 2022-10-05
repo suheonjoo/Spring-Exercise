@@ -27,3 +27,18 @@ public abstract class FileProcessor {
     protected abstract int getResult(int result, int number);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

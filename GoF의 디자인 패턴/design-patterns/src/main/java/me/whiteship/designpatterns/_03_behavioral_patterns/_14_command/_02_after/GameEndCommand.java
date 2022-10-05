@@ -6,6 +6,10 @@ public class GameEndCommand implements Command {
 
     private Game game;
 
+    /**
+     * 명령을 받는 수신자를 넣어줌
+     * @param game
+     */
     public GameEndCommand(Game game) {
         this.game = game;
     }

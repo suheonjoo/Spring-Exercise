@@ -39,7 +39,9 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         }
 
         //인증에 성공한 최종적인 인증객체를 반환하는 것임 -> 이게 인증 객체 역할임!!!
-        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(accountContext.getAccount(), null, accountContext.getAuthorities());
+        UsernamePasswordAuthenticationToken authenticationToken
+                = new UsernamePasswordAuthenticationToken(
+                        accountContext.getAccount(), null, accountContext.getAuthorities());
 
         return authenticationToken;
     }

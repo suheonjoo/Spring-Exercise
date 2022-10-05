@@ -15,9 +15,23 @@ public class Client {
         requestHandler.handle(request);
     }
 
-    public static void main(String[] args) {
-        RequestHandler chain = new AuthRequestHandler(new LoggingRequestHandler(new PrintRequestHandler(null)));
-        Client client = new Client(chain);
-        client.doWork();
-    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

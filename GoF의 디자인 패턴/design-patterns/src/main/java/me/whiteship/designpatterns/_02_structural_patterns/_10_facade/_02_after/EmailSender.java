@@ -17,7 +17,7 @@ public class EmailSender {
     }
 
     /**
-     * 이메일 보내는 메소드
+     * 이메일 보내는 메소드(객체 외부와 통신하는 역할)
      * @param emailMessage
      */
     public void sendEmail(EmailMessage emailMessage) {

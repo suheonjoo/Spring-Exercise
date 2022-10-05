@@ -18,13 +18,18 @@ public class Client {
         Iterator<Post> iterator = posts.iterator();
         System.out.println(iterator.getClass());
 
+
         for (int i = 0 ; i < posts.size() ; i++) {
             Post post = posts.get(i);
             System.out.println(post.getTitle());
         }
 
+        System.out.println("======================");
+
         // TODO 가장 최신 글 먼저 순회하기
+        // post 리스트를 RecentPostIterator 에 넣어주기
         Iterator<Post> recentPostIterator = board.getRecentPostIterator();
+
         while(recentPostIterator.hasNext()) {
             System.out.println(recentPostIterator.next().getTitle());
         }

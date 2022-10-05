@@ -11,6 +11,7 @@ public class App {
 
         if (enabledSpamFilter) {
             //여기서 위에 있는 commentService 는 SpamFilteringCommentDecorator 인자로 주고, 기존의 commentService 를 덮어씌우는 것임
+            //아래 if 문도 마찬가지임
             commentService = new SpamFilteringCommentDecorator(commentService);
         }
 

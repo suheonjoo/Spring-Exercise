@@ -5,7 +5,7 @@ import io.security.corespringsecurity.security.factory.UrlResourcesMapFactoryBea
 import io.security.corespringsecurity.security.filter.PermitAllFilter;
 import io.security.corespringsecurity.security.handler.FormAccessDeniedHandler;
 import io.security.corespringsecurity.security.metadatasource.UrlFilterInvocationSecurityMetadataSource;
-import io.security.corespringsecurity.security.provider.CustomAuthenticationProvider;
+
 import io.security.corespringsecurity.security.provider.FormAuthenticationProvider;
 import io.security.corespringsecurity.security.voter.IpAddressVoter;
 import io.security.corespringsecurity.service.SecurityResourceService;

@@ -16,6 +16,7 @@ public class App {
         tourPlan.setDays(3);
         tourPlan.setStartDate(LocalDate.of(2020, 12, 9));
         tourPlan.setWhereToStay("리조트");
+
         tourPlan.addPlan(0, "체크인 이후 짐풀기");
         tourPlan.addPlan(0, "저녁 식사");
         tourPlan.addPlan(1, "조식 부페에서 식사");

@@ -10,7 +10,7 @@ public class PostfixParser {
 
         Stack<PostfixExpression> stack = new Stack<>();
 
-        //여기서 for 문을 반복하면서 연산하고 stack에 다시 넣고를 반본하변서 연산함
+        //여기서 for 문을 반복하면서 문자 하나하나를 연산하는 동시에 스택에 넣음, stack 에 다시 넣고를 반본하변서 연산함
         for (char c : expression.toCharArray()) {
             //여기서 보면 push 만 하는 것 처럼 보이지만 getExpression()으로 들어가보면, pop 을 함
             stack.push(getExpression(c, stack));
@@ -23,6 +23,7 @@ public class PostfixParser {
 
         // 마지막에는 최종 연산 숫자만 남음 -> 그걸 pop 하는 것임  = 이게 최종 연산임
         return stack.pop();
+
     }
 
     private static PostfixExpression getExpression(char c, Stack<PostfixExpression> stack) {

@@ -11,6 +11,7 @@ public class RecentPostIterator implements Iterator<Post> {
     private Iterator<Post> internalIterator;
 
     public RecentPostIterator(List<Post> posts) {
+        //가장 최신의 글 순서대로 정렬하는 것임
         Collections.sort(posts, (p1, p2) -> p2.getCreatedDateTime().compareTo(p1.getCreatedDateTime()));
         this.internalIterator = posts.iterator();
     }
