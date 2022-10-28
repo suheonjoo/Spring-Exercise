@@ -17,7 +17,7 @@ public class StudyDashboard {
         GHIssue issue = repository.getIssue(eventId);
 
         // Get participants
-        Set<String> participants = new HashSet<>();
+        Set<String> participants = new HashSet<>(); //여기서 처럼 변수를 사용되지 직전에 선언한다
         issue.getComments().forEach(c -> participants.add(c.getUserName()));
 
         // Print participants

@@ -1,5 +1,6 @@
-package me.whiteship.refactoring._02_duplicated_code._06_pull_up_method;
+package me.whiteship.refactoring._02_duplicated_code._06_pull_up_method.before;
 
+import me.whiteship.refactoring._02_duplicated_code._06_pull_up_method.after.Dashboard;
 import org.kohsuke.github.GHIssue;
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;

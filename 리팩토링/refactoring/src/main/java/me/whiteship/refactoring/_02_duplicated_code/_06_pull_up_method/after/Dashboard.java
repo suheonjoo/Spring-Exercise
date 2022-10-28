@@ -1,4 +1,4 @@
-package me.whiteship.refactoring._02_duplicated_code._06_pull_up_method;
+package me.whiteship.refactoring._02_duplicated_code._06_pull_up_method.after;
 
 import org.kohsuke.github.GHIssue;
 import org.kohsuke.github.GHRepository;
@@ -8,9 +8,17 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ParticipantDashboard extends Dashboard {
+public class Dashboard {
 
-    public void printParticipants(int eventId) throws IOException {
+    public static void main(String[] args) throws IOException {
+        ReviewerDashboard reviewerDashboard = new ReviewerDashboard();
+        reviewerDashboard.printReviewers();
+
+        ParticipantDashboard participantDashboard = new ParticipantDashboard();
+        participantDashboard.printUsernames(15);
+    }
+
+    public void printUsernames(int eventId) throws IOException {
         // Get github issue to check homework
         GitHub gitHub = GitHub.connect();
         GHRepository repository = gitHub.getRepository("whiteship/live-study");
@@ -23,5 +31,4 @@ public class ParticipantDashboard extends Dashboard {
         // Print participants
         participants.forEach(System.out::println);
     }
-
 }

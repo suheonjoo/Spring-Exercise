@@ -10,38 +10,47 @@ import java.util.Set;
 
 public class StudyDashboard {
 
+
     private void printParticipants(int eventId) throws IOException {
-        // Get github issue to check homework
-        GitHub gitHub = GitHub.connect();
-        GHRepository repository = gitHub.getRepository("whiteship/live-study");
-        GHIssue issue = repository.getIssue(eventId);
 
-        // Get participants
-        Set<String> participants = new HashSet<>();
-        issue.getComments().forEach(c -> participants.add(c.getUserName()));
+        //여기서 겁나 신기한게 intellij 에서 메서드 추출시 아래 printReviewers 에 있는  비슷한 메서드들고 같이 추출해 줌 ㅎ
+        GHIssue issue = getGhIssue(eventId);
+        Set<String> participants = getUsernames(issue);
+        print(participants);
 
-        // Print participants
+
+    }
+
+    private void print(Set<String> participants) {
         participants.forEach(System.out::println);
     }
 
-    private void printReviewers() throws IOException {
-        // Get github issue to check reviews
+    private Set<String> getUsernames(GHIssue issue) throws IOException {
+        //participants-> usernames 로. 여기서 메서드 추출후 문맥에 따라 이름 변경함
+        Set<String> usernames = new HashSet<>();
+        issue.getComments().forEach(c -> usernames.add(c.getUserName()));
+        return usernames;
+    }
+
+    private GHIssue getGhIssue(int eventId) throws IOException {
         GitHub gitHub = GitHub.connect();
         GHRepository repository = gitHub.getRepository("whiteship/live-study");
-        GHIssue issue = repository.getIssue(30);
+        GHIssue issue = repository.getIssue(eventId);
+        return issue;
+    }
 
-        // Get reviewers
-        Set<String> reviewers = new HashSet<>();
-        issue.getComments().forEach(c -> reviewers.add(c.getUserName()));
+    private void printReviewers() throws IOException {
 
-        // Print reviewers
-        reviewers.forEach(System.out::println);
+        GHIssue issue = getGhIssue(30);
+        Set<String> reviewers = getUsernames(issue);
+        print(reviewers);
     }
 
     public static void main(String[] args) throws IOException {
         StudyDashboard studyDashboard = new StudyDashboard();
         studyDashboard.printReviewers();
         studyDashboard.printParticipants(15);
+
     }
 
 }
