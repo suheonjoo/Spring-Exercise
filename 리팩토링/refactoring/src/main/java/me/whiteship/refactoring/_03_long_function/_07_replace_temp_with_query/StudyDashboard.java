@@ -22,6 +22,7 @@ public class StudyDashboard {
         studyDashboard.print();
     }
 
+
     private void print() throws IOException, InterruptedException {
         GitHub gitHub = GitHub.connect();
         GHRepository repository = gitHub.getRepository("whiteship/live-study");
@@ -72,15 +73,33 @@ public class StudyDashboard {
             writer.print(header(totalNumberOfEvents, participants.size()));
 
             participants.forEach(p -> {
-                long count = p.homework().values().stream()
-                        .filter(v -> v == true)
-                        .count();
-                double rate = count * 100 / totalNumberOfEvents;
+                double rate = getRate(totalNumberOfEvents, p);
 
-                String markdownForHomework = String.format("| %s %s | %.2f%% |\n", p.username(), checkMark(p, totalNumberOfEvents), rate);
+                String markdownForHomework = getMarkdownForParticipant(totalNumberOfEvents, p);
                 writer.print(markdownForHomework);
             });
         }
+    }
+
+    /**
+     * 지금 여기서 getRate를 추출하면서 또한 getMarkdownForParticipant의 파라미터를 줄이기 위해
+     * getRate를 getMarkdownForParticipant의 String.format 파라미터로 넣음
+     * -> 이렇게 임시 변수를 질의 함수로 바꾸면서 쿼리를 줄임
+     *
+     * @param totalNumberOfEvents
+     * @param p
+     * @return
+     */
+    private double getRate(int totalNumberOfEvents, Participant p) {
+        long count = p.homework().values().stream()
+                .filter(v -> v == true)
+                .count();
+        double rate = count * 100 / totalNumberOfEvents;
+        return rate;
+    }
+
+    private String getMarkdownForParticipant(int totalNumberOfEvents, Participant p) {
+        return String.format("| %s %s | %.2f%% |\n", p.username(), checkMark(p, totalNumberOfEvents), getRate(totalNumberOfEvents, p));
     }
 
     /**

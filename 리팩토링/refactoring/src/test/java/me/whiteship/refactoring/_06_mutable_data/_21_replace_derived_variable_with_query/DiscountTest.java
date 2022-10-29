@@ -1,5 +1,6 @@
 package me.whiteship.refactoring._06_mutable_data._21_replace_derived_variable_with_query;
 
+import me.whiteship.refactoring._06_mutable_data._21_replace_derived_variable_with_query._01_before.Discount;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

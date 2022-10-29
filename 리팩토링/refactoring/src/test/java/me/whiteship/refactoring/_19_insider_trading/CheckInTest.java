@@ -1,5 +1,7 @@
 package me.whiteship.refactoring._19_insider_trading;
 
+import me.whiteship.refactoring._19_insider_trading._01_before.CheckIn;
+import me.whiteship.refactoring._19_insider_trading._01_before.Ticket;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

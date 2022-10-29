@@ -22,6 +22,9 @@ public class StudyDashboard {
 
     public StudyDashboard(int totalNumberOfEvents) {
         this.totalNumberOfEvents = totalNumberOfEvents;
+
+        //여러쓰레드에 동시에 변경이 일어나면 ConcurrentModifiedExcpetion 이 일어나는데 이를 방지해주는 컬렉션임
+        //새로운 element가 추가가 될때 기존에 있는 것을 copy 해서 새로 만들기 때문에 Concurrent에 안전한 컬렌션임
         participants = new CopyOnWriteArrayList<>();
         firstParticipantsForEachEvent = new Participant[this.totalNumberOfEvents];
     }
@@ -32,13 +35,22 @@ public class StudyDashboard {
     }
 
     private void print() throws IOException, InterruptedException {
-        GHRepository ghRepository = getGhRepository();
+        checkGithubIssue(getGhRepository());
+        new StudyPrinter(this.totalNumberOfEvents, this.participants).execute();
+        printFirstParticipants();
+    }
 
+    private void checkGithubIssue(GHRepository ghRepository) throws InterruptedException {
+        /**
+         * 쓰레드를 여러개 만들어저 멀티 쓰레드 프로그래밍 하는 부분임
+         * //여러쓰레드에 동시에 변경이 일어나면 ConcurrentModifiedExcpetion 이 일어나는데 이를 방지해주는 컬렉션임
+         * //새로운 element가 추가가 될때 기존에 있는 것을 copy 해서 새로 만들기 때문에 Concurrent에 안전한 컬렌션임
+         *
+         */
         ExecutorService service = Executors.newFixedThreadPool(8);
         CountDownLatch latch = new CountDownLatch(totalNumberOfEvents);
 
-        ///////////////////////
-        for (int index = 1 ; index <= totalNumberOfEvents ; index++) {
+        for (int index = 1; index <= totalNumberOfEvents; index++) {
             int eventId = index;
             service.execute(new Runnable() {
                 @Override
@@ -46,21 +58,14 @@ public class StudyDashboard {
                     try {
                         GHIssue issue = ghRepository.getIssue(eventId);
                         List<GHIssueComment> comments = issue.getComments();
-                        Date firstCreatedAt = null;
-                        Participant first = null;
 
-                        for (GHIssueComment comment : comments) {
-                            Participant participant = findParticipant(comment.getUserName(), participants);
-                            participant.setHomeworkDone(eventId);
-
-                            if (firstCreatedAt == null || comment.getCreatedAt().before(firstCreatedAt)) {
-                                firstCreatedAt = comment.getCreatedAt();
-                                first = participant;
-                            }
-                        }
-
-                        firstParticipantsForEachEvent[eventId - 1] = first;
-                        latch.countDown();
+                        /**
+                         * 여기서 포문 안에 2가지 작업이 있는데 이걸 포문을 2개로 분리하고 함수추출 작업을 함
+                         * -> findFirst, checkHomework
+                         */
+                        checkHomework(comments, eventId);
+                        firstParticipantsForEachEvent[eventId - 1] = findFirst(comments);
+                        latch.countDown(); //countdown latch를 낮추는 부분
                     } catch (IOException e) {
                         throw new IllegalArgumentException(e);
                     }
@@ -70,9 +75,26 @@ public class StudyDashboard {
 
         latch.await();
         service.shutdown();
+    }
 
-        new StudyPrinter(this.totalNumberOfEvents, this.participants).execute();
-        printFirstParticipants();
+    private Participant findFirst(List<GHIssueComment> comments) throws IOException {
+        Date firstCreatedAt = null;
+        Participant first = null;
+        for (GHIssueComment comment : comments) {
+            Participant participant = findParticipant(comment.getUserName(), participants);
+            if (firstCreatedAt == null || comment.getCreatedAt().before(firstCreatedAt)) {
+                firstCreatedAt = comment.getCreatedAt();
+                first = participant;
+            }
+        }
+        return first;
+    }
+
+    private void checkHomework(List<GHIssueComment> comments, int eventId) {
+        for (GHIssueComment comment : comments) {
+            Participant participant = findParticipant(comment.getUserName(), participants);
+            participant.setHomeworkDone(eventId);
+        }
     }
 
     private void printFirstParticipants() {

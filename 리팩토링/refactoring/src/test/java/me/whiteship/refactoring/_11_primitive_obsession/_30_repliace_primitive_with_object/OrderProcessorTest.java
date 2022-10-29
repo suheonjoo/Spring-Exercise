@@ -1,5 +1,7 @@
 package me.whiteship.refactoring._11_primitive_obsession._30_repliace_primitive_with_object;
 
+import me.whiteship.refactoring._11_primitive_obsession._30_repliace_primitive_with_object._01_before.Order;
+import me.whiteship.refactoring._11_primitive_obsession._30_repliace_primitive_with_object._01_before.OrderProcessor;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

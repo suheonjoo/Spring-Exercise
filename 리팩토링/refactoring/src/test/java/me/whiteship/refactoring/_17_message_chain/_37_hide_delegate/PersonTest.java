@@ -1,5 +1,7 @@
 package me.whiteship.refactoring._17_message_chain._37_hide_delegate;
 
+import me.whiteship.refactoring._17_message_chain._37_hide_delegate._01_before.Department;
+import me.whiteship.refactoring._17_message_chain._37_hide_delegate._01_before.Person;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

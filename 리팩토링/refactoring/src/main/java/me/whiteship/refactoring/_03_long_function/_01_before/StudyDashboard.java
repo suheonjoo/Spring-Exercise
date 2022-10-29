@@ -22,6 +22,11 @@ public class StudyDashboard {
         studyDashboard.print();
     }
 
+    /**
+     * 참석률을 계산하느 코드
+     * @throws IOException
+     * @throws InterruptedException
+     */
     private void print() throws IOException, InterruptedException {
         GitHub gitHub = GitHub.connect();
         GHRepository repository = gitHub.getRepository("whiteship/live-study");
@@ -65,6 +70,7 @@ public class StudyDashboard {
         latch.await();
         service.shutdown();
 
+        //참석률 계산
         try (FileWriter fileWriter = new FileWriter("participants.md");
              PrintWriter writer = new PrintWriter(fileWriter)) {
             participants.sort(Comparator.comparing(Participant::username));
@@ -77,6 +83,7 @@ public class StudyDashboard {
                         .count();
                 double rate = count * 100 / totalNumberOfEvents;
 
+                //마크다운을 만들어내는 부분
                 String markdownForHomework = String.format("| %s %s | %.2f%% |\n", p.username(), checkMark(p, totalNumberOfEvents), rate);
                 writer.print(markdownForHomework);
             });

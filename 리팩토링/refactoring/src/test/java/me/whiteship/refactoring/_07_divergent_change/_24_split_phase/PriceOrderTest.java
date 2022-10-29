@@ -1,5 +1,8 @@
 package me.whiteship.refactoring._07_divergent_change._24_split_phase;
 
+import me.whiteship.refactoring._07_divergent_change._24_split_phase._01_before.PriceOrder;
+import me.whiteship.refactoring._07_divergent_change._24_split_phase._01_before.Product;
+import me.whiteship.refactoring._07_divergent_change._24_split_phase._01_before.ShippingMethod;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

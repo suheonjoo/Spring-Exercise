@@ -1,5 +1,6 @@
 package me.whiteship.refactoring._16_temporary_field._36_introduce_special_case;
 
+import me.whiteship.refactoring._16_temporary_field._36_introduce_special_case._01_before.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

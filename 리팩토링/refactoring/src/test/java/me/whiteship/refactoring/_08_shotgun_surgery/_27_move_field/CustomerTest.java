@@ -1,5 +1,6 @@
 package me.whiteship.refactoring._08_shotgun_surgery._27_move_field;
 
+import me.whiteship.refactoring._08_shotgun_surgery._27_move_field._01_before.Customer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,5 +1,7 @@
 package me.whiteship.refactoring._08_shotgun_surgery._28_inline_function;
 
+import me.whiteship.refactoring._08_shotgun_surgery._28_inline_function._01_before.Driver;
+import me.whiteship.refactoring._08_shotgun_surgery._28_inline_function._01_before.Rating;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

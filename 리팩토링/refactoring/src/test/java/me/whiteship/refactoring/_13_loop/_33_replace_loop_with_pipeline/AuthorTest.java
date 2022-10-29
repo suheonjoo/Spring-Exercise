@@ -1,5 +1,6 @@
 package me.whiteship.refactoring._13_loop._33_replace_loop_with_pipeline;
 
+import me.whiteship.refactoring._13_loop._33_replace_loop_with_pipeline._01_before.Author;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

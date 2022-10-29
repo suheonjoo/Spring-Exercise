@@ -1,5 +1,6 @@
 package me.whiteship.refactoring._15_speculative_generality._35_remove_dead_code;
 
+import me.whiteship.refactoring._15_speculative_generality._35_remove_dead_code._01_before.Reservation;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;

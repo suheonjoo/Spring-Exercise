@@ -1,5 +1,6 @@
 package me.whiteship.refactoring._18_middle_man._39_replace_superclass_with_delegate;
 
+import me.whiteship.refactoring._18_middle_man._39_replace_superclass_with_delegate._01_before.Scroll;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

@@ -1,5 +1,7 @@
 package me.whiteship.refactoring._07_divergent_change._25_move_function;
 
+import me.whiteship.refactoring._07_divergent_change._25_move_function._01_before.Account;
+import me.whiteship.refactoring._07_divergent_change._25_move_function._01_before.AccountType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

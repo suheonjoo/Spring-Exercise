@@ -1,5 +1,9 @@
 package me.whiteship.refactoring._18_middle_man._40_replace_subclass_with_delegate;
 
+import me.whiteship.refactoring._18_middle_man._40_replace_subclass_with_delegate._01_before.Booking;
+import me.whiteship.refactoring._18_middle_man._40_replace_subclass_with_delegate._01_before.PremiumBooking;
+import me.whiteship.refactoring._18_middle_man._40_replace_subclass_with_delegate._01_before.PremiumExtra;
+import me.whiteship.refactoring._18_middle_man._40_replace_subclass_with_delegate._01_before.Show;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
