@@ -15,4 +15,8 @@ public class Reservation {
 
     private boolean paid;
 
+    /**
+     * CourtReservation 에 있는 필드를 여기 Reservation 으로 옮기고 CourtReservation 를 삭제 함
+     */
+    private String courtNumber;
 }

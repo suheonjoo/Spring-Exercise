@@ -2,11 +2,14 @@ package me.whiteship.refactoring._20_large_class._41_extract_superclass._02_afte
 
 import java.util.List;
 
-public class Department {
+public class Department extends Party{
 
-    private String name;
 
     private List<Employee> staff;
+
+    public Department(String name) {
+        super(name);
+    }
 
     public String getName() {
         return name;
@@ -16,12 +19,9 @@ public class Department {
         return staff;
     }
 
-    public double totalMonthlyCost() {
-        return this.staff.stream().mapToDouble(e -> e.getMonthlyCost()).sum();
-    }
-
-    public double totalAnnualCost() {
-        return this.totalMonthlyCost() * 12;
+    @Override
+    public double monthlyCost() {
+        return this.staff.stream().mapToDouble(e -> e.annualCost()).sum();
     }
 
     public int headCount() {

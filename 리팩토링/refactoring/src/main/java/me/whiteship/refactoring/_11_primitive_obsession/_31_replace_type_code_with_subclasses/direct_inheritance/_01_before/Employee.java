@@ -2,6 +2,9 @@ package me.whiteship.refactoring._11_primitive_obsession._31_replace_type_code_w
 
 import java.util.List;
 
+/**
+ * 직접 상속하는 서브 클래스 만들수 있는 경우
+ */
 public class Employee {
 
     private String name;

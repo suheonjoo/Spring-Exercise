@@ -37,4 +37,13 @@ public class Customer {
     public void setPaymentHistory(PaymentHistory paymentHistory) {
         this.paymentHistory = paymentHistory;
     }
+
+    /**
+     * 따로 Unknown 판단 로직을 따로 빼줌
+     * 근데 보면 customer 클래스 소속으로 넣는게 낫다고 생각해서 customer 로 클래스 옮김
+     * @return
+     */
+    public boolean isUnknown() {
+        return false; //여기서는 false 로 반환하고 unknown 클래스 에서는 true를 반환하도록 오버라이드 함
+    }
 }

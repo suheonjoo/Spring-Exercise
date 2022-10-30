@@ -23,7 +23,7 @@ public class ReadingClient {
     }
 
     private double baseCharge(Reading reading) {
-        return baseRate(reading.month(), reading.year() * reading.quantity());
+        return baseRate(reading.month(), reading.year()) * reading.quantity();
     }
 
 }

@@ -20,4 +20,13 @@ public class Ticket {
     public boolean isPrime() {
         return prime;
     }
+
+    /**
+     * 옮겨짐
+     * @return
+     */
+    public boolean isFastPass() {
+        LocalDate earlyBirdDate = LocalDate.of(2022, 1, 1);
+        return isPrime() && getPurchasedDate().isBefore(earlyBirdDate);
+    }
 }

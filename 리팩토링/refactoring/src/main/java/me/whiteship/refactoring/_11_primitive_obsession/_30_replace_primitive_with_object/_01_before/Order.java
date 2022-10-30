@@ -1,4 +1,4 @@
-package me.whiteship.refactoring._11_primitive_obsession._30_repliace_primitive_with_object._02_after;
+package me.whiteship.refactoring._11_primitive_obsession._30_replace_primitive_with_object._01_before;
 
 public class Order {
 

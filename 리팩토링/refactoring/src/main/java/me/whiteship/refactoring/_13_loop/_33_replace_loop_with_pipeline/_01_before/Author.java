@@ -16,6 +16,9 @@ public class Author {
 
     static public List<String> TwitterHandles(List<Author> authors, String company) {
         var result = new ArrayList<String> ();
+        /**
+         * 이 부분을 스트림으로 바꿀꺼임
+         */
         for (Author a : authors) {
             if (a.company.equals(company)) {
                 var handle = a.twitterHandle;

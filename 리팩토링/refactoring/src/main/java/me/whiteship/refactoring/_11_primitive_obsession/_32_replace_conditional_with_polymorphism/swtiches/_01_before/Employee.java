@@ -2,8 +2,12 @@ package me.whiteship.refactoring._11_primitive_obsession._32_replace_conditional
 
 import java.util.List;
 
+
 public class Employee {
 
+    /**
+     * 타입에 따라 로직이 달라니지는 클래스 임
+     */
     private String type;
 
     private List<String> availableProjects;

@@ -14,4 +14,12 @@ public class Person {
     public Person getManager() {
         return this.department.getManager();
     }
+
+    /**
+     * 여기서 department 접근을 허용해 줌
+     * @return
+     */
+    public Department getDepartment() {
+        return department;
+    }
 }

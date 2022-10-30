@@ -2,6 +2,9 @@ package me.whiteship.refactoring._11_primitive_obsession._31_replace_type_code_w
 
 import java.util.List;
 
+/**
+ * 이거는 이미 상속 구조가 있어서 추가로 넣기 애매하고 간접적인 상속을 활용하는 방법임
+ */
 public class Employee {
 
     private String name;
