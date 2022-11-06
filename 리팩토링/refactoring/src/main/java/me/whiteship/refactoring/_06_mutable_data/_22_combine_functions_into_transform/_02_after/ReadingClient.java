@@ -14,6 +14,11 @@ public class ReadingClient {
     }
 
 
+    /**
+     * EnrichReading 이라는 record 자료 구조를 만들고 메서드를 통해서 접근가능하게 하는 것임
+     * @param reading
+     * @return
+     */
     protected EnrichReading enrichReading(Reading reading) {
         return new EnrichReading(reading, baseCharge(reading), taxableCharge(reading));
     }

@@ -11,6 +11,10 @@ public class PremiumDelegate {
         this.extra = extra;
     }
 
+    /**
+     * Show 클래스에 있는 메서드를 PremiumDelegate 클래스로 옮김(위임함)
+     * @return
+     */
     public boolean hasTalkback() {
         return this.host.show.hasOwnProperty("talkback");
     }

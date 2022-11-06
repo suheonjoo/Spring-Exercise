@@ -24,6 +24,8 @@ public class VoyageRating {
         int result = 1;
         if (this.history.size() < 5) result += 4;
         result += this.history.stream().filter(v -> v.profit() < 0).count();
+
+
         /**
          * 여기서 똑같은 조건이 다른 메서드에 반복이 됨 (1)
          * 이렇게 같은 조건이지만 안의 로직이 다름
@@ -45,6 +47,7 @@ public class VoyageRating {
 
         if (this.voyage.zone().equals("china")) result += 1;
         if (this.voyage.zone().equals("east-indies")) result +=1 ;
+
         /**
          * 여기서 똑같은 조건이 다른 메서드에 반복이 됨 (2)
          */

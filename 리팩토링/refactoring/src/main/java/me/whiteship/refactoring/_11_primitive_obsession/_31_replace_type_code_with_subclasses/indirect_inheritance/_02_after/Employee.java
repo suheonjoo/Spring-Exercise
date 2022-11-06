@@ -4,6 +4,9 @@ public class Employee {
 
     private String name;
 
+    /**
+     * 여기에 EmployeeType 을 만들어서 Manager, Engineer, Salesman 이 상속함
+     */
     private EmployeeType type;
 
     public Employee(String name, String typeValue) {

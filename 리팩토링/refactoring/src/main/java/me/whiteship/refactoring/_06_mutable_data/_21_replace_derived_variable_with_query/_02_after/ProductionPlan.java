@@ -16,6 +16,9 @@ public class ProductionPlan {
     }
 
     public double getProduction() {
+        /**
+         * production 변수로 값을 받지 않고 스트림으로 바로 계산하고 리턴해서 넘겨줌
+         */
         return this.adjustments.stream().mapToDouble(Double::valueOf).sum();
     }
 

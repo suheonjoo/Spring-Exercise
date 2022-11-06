@@ -1,4 +1,4 @@
-package me.whiteship.designpatterns._03_behavioral_patterns._22_template._02_after;
+package me.whiteship.designpatterns._03_behavioral_patterns._22_template._02_callback._02_after;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

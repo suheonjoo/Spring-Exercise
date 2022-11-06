@@ -15,6 +15,11 @@ public class CustomerService {
         return customerName;
     }
 
+    /**
+     * 여기 코드를 보면 unknown 을 체크하는 조건들이 많이 있음 밑에 weeksDelinquent 메서드 에도 있음
+     * @param site
+     * @return
+     */
     public BillingPlan billingPlan(Site site) {
         Customer customer = site.getCustomer();
         return customer.getName().equals("unknown") ? new BasicBillingPlan() : customer.getBillingPlan();

@@ -4,6 +4,10 @@ public class Site {
 
     private Customer customer;
 
+    /**
+     * Site 에서 unknown 판단 로직을 넣어줌
+     * @param customer
+     */
     public Site(Customer customer) {
         this.customer = customer.getName().equals("unknown") ? new UnknownCustomer() : customer ;
     }

@@ -71,6 +71,9 @@ public class StudyDashboard {
 
         /**
          * 이부분이 기존의 아래처럼 마크다운으로 출력하지 않고, 콘솔, 엑셀 등 다양한 방법으로 출력할수 있는 것을 고려
+         *
+         * **********************************************************************************
+         *
          */
         new StudyPrinter(this.totalNumberOfEvents, participants).execute(participants);
     }

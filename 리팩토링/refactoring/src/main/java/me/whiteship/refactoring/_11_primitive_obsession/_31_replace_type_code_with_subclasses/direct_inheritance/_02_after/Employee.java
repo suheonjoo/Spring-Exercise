@@ -15,9 +15,8 @@ public abstract class Employee {
             case "salesman" -> new Salesman(name);
             default -> throw new IllegalArgumentException(type);
         };
-
         /**
-         * 아래 switch 문을 위와 같이 대체할 수 있음
+         * 아래 switch 문을 "위"와 같이 대체할 수 있음
          */
 //        switch (type) {
 //            case "engineer":

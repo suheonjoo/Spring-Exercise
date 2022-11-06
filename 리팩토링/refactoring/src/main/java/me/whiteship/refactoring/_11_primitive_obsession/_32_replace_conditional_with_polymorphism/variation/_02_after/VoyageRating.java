@@ -20,6 +20,10 @@ public class VoyageRating {
         return (vpf * 3 > (vr + chr * 2)) ? 'A' : 'B';
     }
 
+    /**
+     * 여기부분이 before 하고 달라진 것임
+     * @return
+     */
     protected int captainHistoryRisk() {
         int result = 1;
         if (this.history.size() < 5) result += 4;
@@ -35,12 +39,17 @@ public class VoyageRating {
         return Math.max(result, 0);
     }
 
+    /**
+     * 여기부분이 before 하고 달라진 것임
+     * @return
+     */
     protected int voyageProfitFactor() {
         int result = 2;
         if (this.voyage.zone().equals("china")) result += 1;
         if (this.voyage.zone().equals("east-indies")) result += 1;
         result += voyageLengthFactor();
         result += historyLengthFactor();
+
         return result;
     }
 

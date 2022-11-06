@@ -1,4 +1,4 @@
-package me.whiteship.designpatterns._03_behavioral_patterns._22_template._01_before;
+package me.whiteship.designpatterns._03_behavioral_patterns._22_template._02_callback._01_before;
 
 public class Client {
 

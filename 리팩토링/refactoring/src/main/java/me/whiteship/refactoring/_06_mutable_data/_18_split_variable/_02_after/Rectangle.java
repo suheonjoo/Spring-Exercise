@@ -7,8 +7,8 @@ public class Rectangle {
 
     public void updateGeometry(double height, double width) {
         /**
-         * 여기서 temp 임시 변수를 수정함 perimeter, area 로
-         * 여기서는 final 사용하는게 좋음~~~ 한역할을 변경없이 한번만 할당 받았으니깐
+         * 여기서 temp 임시 변수를 수정함 perimeter, area 로 -> temp 가 2가지 역할을 가지고 있어서 ㅎ
+         * 그래고 여기서는 final 사용하는게 좋음~~~ 한 역할을 변경없이 한번만 할당 받았으니깐
          */
         final double perimeter = 2 * (height + width);
         System.out.println("Perimeter: " + perimeter);

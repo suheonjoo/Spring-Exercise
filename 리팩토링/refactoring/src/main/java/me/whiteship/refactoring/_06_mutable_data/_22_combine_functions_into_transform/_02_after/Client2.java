@@ -10,6 +10,9 @@ public class Client2 extends ReadingClient{
      * @param reading
      */
     public Client2(Reading reading) {
+        /**
+         * ReadingClint 에서 enrichReading 메서드를 만들어서 접근가능하게 함
+         */
         EnrichReading enrichReading = enrichReading(reading);
         this.base = enrichReading(reading).baseCharge();
         this.taxableCharge = enrichReading.taxableCharge();

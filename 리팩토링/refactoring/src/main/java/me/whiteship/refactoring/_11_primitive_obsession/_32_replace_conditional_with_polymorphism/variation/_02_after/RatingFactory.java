@@ -4,6 +4,13 @@ import java.util.List;
 
 public class RatingFactory {
 
+    /**
+     * 이거 팩토리 메서드임
+     *
+     * @param voyage
+     * @param history
+     * @return
+     */
     public static VoyageRating createRating(Voyage voyage, List<VoyageHistory> history) {
         if (voyage.zone().equals("china") && hasChinaHistory(history)) {
             return new ChinaExperiencedVoyageRating(voyage, history);

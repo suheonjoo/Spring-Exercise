@@ -12,8 +12,8 @@ public class Billing {
     }
 
     /**
-     * 여기서 getTotalOutstanding 와 sendbill 을 분리시킴 -> sendBill 은 이미 있으니깐 분리시킬 필요 없음
-     * 이후 리팩토링 후 테스트 코드에서 값만 조회하지 sendbill 을 날리지 않음
+     * 여기서 getTotalOutstanding 와 sendBill 을 분리시킴 -> sendBill 은 이미 있으니깐 분리시킬 필요 없음
+     * 이후 리팩토링 후 테스트 코드에서 값만 조회하지 sendBill 을 날리지 않음
      * @return
      */
     public double totalOutstanding() {
