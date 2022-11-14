@@ -4,18 +4,6 @@ import java.time.LocalDate;
 
 public class Shipment {
 
-    public LocalDate deliveryDate(Order order, boolean isRush) {
-        if (isRush) {
-            /**
-             * “조건문 분해하기 (Decompose Condition)”
-             * 그리고 이거에 따른 테스트 코드도 수정함
-             */
-            return rushDeliveryDate(order);
-        } else {
-            return regularDeliveryDate(order);
-        }
-    }
-
     public LocalDate regularDeliveryDate(Order order) {
         int deliveryTime = switch (order.getDeliveryState()) {
             case "WA", "CA" -> 2;
