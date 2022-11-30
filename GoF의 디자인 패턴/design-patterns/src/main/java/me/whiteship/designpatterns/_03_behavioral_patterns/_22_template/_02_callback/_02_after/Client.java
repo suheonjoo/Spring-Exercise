@@ -10,12 +10,8 @@ public class Client {
          *
          * 여기 주의해할게 FileProcessor 의 구현체로 Multiply 로 했는데 인자로 Plus 구현체같이 행동하도록 오버라이드 함
          */
-        int result = fileProcessor.process(new Operator() {
-            @Override
-            public int getResult(int sum, int number) {
-                return sum += number;
-            }
-        });
+        int result = fileProcessor.process(new Plus());
+
         /**
          * 이거는 위에 인자를 람다로 받은거임
          */

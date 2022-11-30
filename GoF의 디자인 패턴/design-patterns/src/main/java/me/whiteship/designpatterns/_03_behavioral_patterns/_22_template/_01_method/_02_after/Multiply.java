@@ -8,7 +8,8 @@ public class Multiply extends FileProcessor {
 
     @Override
     protected int getResult(int result, int number) {
-        return result *= number;
+        int result2 = result *number;
+        return result2;
     }
 
 }
