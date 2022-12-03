@@ -1,1 +1,0 @@
-package me.whiteship.chapter05.item26;
