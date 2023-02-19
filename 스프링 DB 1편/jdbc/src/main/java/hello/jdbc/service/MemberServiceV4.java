@@ -35,7 +35,6 @@ public class MemberServiceV4 {
 
 
         memberRepository.update(fromId, fromMember.getMoney() - money);
-
         validation(toMember);
         memberRepository.update(toId, toMember.getMoney() + money);
     }
