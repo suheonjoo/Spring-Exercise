@@ -18,8 +18,10 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 //@Import(AspectV1.class)
 //@Import(AspectV2.class)
 //@Import(AspectV3.class)
-@Import(AspectV4Pointcut.class)
-//@Import({AspectV5Order.LogAspect.class,AspectV5Order.TxAspect.class})
+// @Import(AspectV4Pointcut.class)
+@Import({AspectV5Order.LogAspect.class,AspectV5Order.TxAspect.class})
+//AspectV5Order 안에 내부 클래스 LogAspect, TxAspect 가 있는데 그냥 한번에 AspectV5Order 로 import하면 aspect 적용이 안된다!!!
+// @Import({AspectV5Order.class})
 //@Import(AspectV6Advice.class)
 public class AopTest {
     @Autowired

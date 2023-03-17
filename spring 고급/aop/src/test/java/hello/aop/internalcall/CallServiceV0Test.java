@@ -14,7 +14,7 @@ class CallServiceV0Test {
     CallServiceV0 callServiceV0;
 
     @Test
-    void external() {
+    void external() throws NoSuchMethodException {
         callServiceV0.external();
     }
 

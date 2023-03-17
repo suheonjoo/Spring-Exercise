@@ -25,7 +25,7 @@ public class AspectV3 {
         return joinPoint.proceed();
     }
 
-    //hello.aop.order 패키지와 하위 패키지이면서 클래스 이름 패턴이 *Service
+    //hello.aop.order 패키지와 하위 패키지이면서 클래스 이름 패턴이 *Service // (&&)and 조건이라서
     @Around("allOrder() && allService()")
     public Object doTransaction(ProceedingJoinPoint joinPoint) throws Throwable {
 

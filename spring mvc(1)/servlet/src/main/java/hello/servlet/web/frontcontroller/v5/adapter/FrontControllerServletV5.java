@@ -64,7 +64,7 @@ public class FrontControllerServletV5 extends HelloServlet {
         //handlerAdapters.iter 하면 포문 자동으로 만들어줌
         MyHandlerAdapter adapter= getHandlerAdapter(handler);
 
-        //위에서 찾은 어뎁터 정보 가지고 request, reponse, handler를 전달하여 modelview에 전달해줌
+        //위에서 찾은 어뎁터 정보 가지고 request, response, handler를 전달하여 modelview에 전달해줌
         ModelView mv = adapter.handle(request, response, handler);
 
         //전달 받은 모델뷰로 MyView 를 생성-> 그 후 렌더링
