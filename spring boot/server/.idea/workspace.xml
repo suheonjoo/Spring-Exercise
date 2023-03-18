@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="48a3fde5-f51c-4225-884d-c9887d7b82be" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../autoconfig/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/main/java/hello/AutoConfigApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/main/java/hello/config/DbConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/main/java/hello/config/MemoryConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/main/java/hello/member/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/main/java/hello/member/MemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/main/java/memory/Memory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/main/java/memory/MemoryCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/main/java/memory/MemoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/main/java/memory/MemoryFinder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/test/java/hello/AutoConfigApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/test/java/hello/config/DbConfigTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autoconfig/src/test/java/hello/member/MemberRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/src/main/java/hello/boot/BootApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/src/main/java/hello/boot/controller/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot/src/test/java/hello/boot/BootApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/src/main/java/hello/MySpringBootMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/src/main/java/hello/boot/MySpringApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/src/main/java/hello/boot/MySpringBootApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/src/main/java/hello/embed/EmbedTomcatServletMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/src/main/java/hello/embed/EmbedTomcatSpringMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/src/main/java/hello/servlet/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/src/main/java/hello/spring/HelloConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../embed/src/main/java/hello/spring/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/src/main/java/hello/LibApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/src/main/java/hello/controller/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/src/test/java/hello/nostarter/NoStarterApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/7.4/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/7.4/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/7.4/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/7.4/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/7.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/7.4/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.idea/modules/memory-v1.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/classes/java/main/memory/Memory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/classes/java/main/memory/MemoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/classes/java/main/memory/MemoryFinder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/classes/java/test/memory/MemoryFinderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/libs/memory-v1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/reports/tests/test/classes/memory.MemoryFinderTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/reports/tests/test/css/base-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/reports/tests/test/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/reports/tests/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/reports/tests/test/js/report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/reports/tests/test/packages/memory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/test-results/test/TEST-memory.MemoryFinderTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/test-results/test/binary/output.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/src/main/java/memory/Memory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/src/main/java/memory/MemoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/src/main/java/memory/MemoryFinder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v1/src/test/java/memory/MemoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/7.4/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/7.4/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/7.4/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/7.4/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/7.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/7.4/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.idea/modules/memory-v1.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.idea/modules/memory-v2.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/classes/java/main/memory/Memory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/classes/java/main/memory/MemoryAutoConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/classes/java/main/memory/MemoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/classes/java/main/memory/MemoryFinder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/classes/java/test/memory/MemoryFinderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/libs/memory-v2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/reports/tests/test/classes/memory.MemoryFinderTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/reports/tests/test/css/base-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/reports/tests/test/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/reports/tests/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/reports/tests/test/js/report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/reports/tests/test/packages/memory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/resources/main/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/test-results/test/TEST-memory.MemoryFinderTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/test-results/test/binary/output.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/src/main/java/memory/Memory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/src/main/java/memory/MemoryAutoConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/src/main/java/memory/MemoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/src/main/java/memory/MemoryFinder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory-v2/src/test/java/memory/MemoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/libs/memory-v1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/src/main/java/hello/ProjectV1Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/src/main/java/hello/config/MemoryConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/src/main/java/hello/controller/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v1/src/test/java/hello/ProjectV1ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/libs/memory-v2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/src/main/java/hello/ProjectV2Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/src/main/java/hello/controller/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/src/main/java/hello/selector/HelloBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/src/main/java/hello/selector/HelloConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/src/main/java/hello/selector/HelloImportSelector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/src/test/java/hello/ProjectV2ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-v2/src/test/java/hello/selector/ImportSelectorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/container/AppInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/container/AppInitV1Servlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/container/AppInitV2Spring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/container/AppInitV3SpringMvc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/container/MyContainerInitV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/container/MyContainerInitV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/servlet/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/servlet/TestServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/spring/HelloConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/spring/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/services/jakarta.servlet.ServletContainerInitializer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="testRuntimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2N7hdFXI5YU6mDNzKi9opAaLLLk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "spring.configuration.checksum": "f388e2a0991e057a0316947c380806f0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
+    <configuration name="server [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="server [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.7" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : hello : server-0.0.1-SNAPSHOT.war (exploded)">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="55fb1869-7cf1-43d9-83c7-399dedc28852" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51352" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : hello : server-0.0.1-SNAPSHOT.war (exploded)" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.server [build]" />
+      <item itemvalue="Gradle.server [dependencies]" />
+      <item itemvalue="Tomcat Server.Unnamed" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.server [build]" />
+        <item itemvalue="Gradle.server [dependencies]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48a3fde5-f51c-4225-884d-c9887d7b82be" name="Changes" comment="" />
+      <created>1679021112541</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679021112541</updated>
+      <workItem from="1679021113958" duration="1751000" />
+      <workItem from="1679023351016" duration="1683000" />
+      <workItem from="1679025335135" duration="6776000" />
+      <workItem from="1679181480921" duration="35000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
